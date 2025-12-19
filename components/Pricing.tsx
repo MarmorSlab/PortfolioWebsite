@@ -35,8 +35,8 @@ export default function Pricing() {
             price: "Custom",
             description: "For complex projects and large businesses",
             features: [
+                "All features of Professional",
                 "Unlimited pages",
-                "E-commerce functionality",
                 "Custom features",
                 "Priority support",
                 "Performance optimization",

@@ -23,7 +23,7 @@ export default function Navbar() {
         >
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 <a href="#" className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                    DarkCode Studios
+                    MarmorSlab
                 </a>
                 
                 <div className="hidden md:flex items-center gap-8">

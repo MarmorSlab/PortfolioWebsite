@@ -28,7 +28,7 @@ export function About() {
                     Hi, I'm Agustin, an aspiring embedded systems engineer with a passion for web development.
                     While I'm building my skills and portfolio, I'm excited to help small businesses get online with clean,
                     fast, and mobile-friendly websites. I focus on delivering modern designs that not only look great but
-                    also perform well — all while keeping your budget in mind.
+                    also perform well, all while keeping your budget in mind.
                 </p>
                 <p className="text-slate-700 dark:text-slate-200 text-lg">
                     If you're looking for a motivated developer who's eager to grow and deliver real value, let's connect!
