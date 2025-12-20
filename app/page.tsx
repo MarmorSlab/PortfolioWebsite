@@ -1,6 +1,5 @@
-
 "use client";
-import Navbar from "@/components/Navbar";
+
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
@@ -8,30 +7,33 @@ import Contact from "@/components/Contact";
 import { FadeInSection } from "@/components/FadeInSection";
 import Pricing from "@/components/Pricing";
 import { About } from "@/components/About";
-import Testimonials from "@/components/Testimonials";
+import Benefits from "@/components/Benefits";
 import Footer from "@/components/Footer";
+import Process from "@/components/Process";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <main>
         <Hero />
-
-        <FadeInSection direction="left">
+        <FadeInSection direction="up">
           <About />
         </FadeInSection>
-
-        <FadeInSection direction="right">
+        <FadeInSection direction="left">
           <Services />
         </FadeInSection>
 
-        <FadeInSection direction="up">
-          <Projects />
+        <FadeInSection direction="right">
+          <Process />
         </FadeInSection>
-        
+
+
+        <FadeInSection direction="up">
+          <Benefits />
+        </FadeInSection>
+
         <FadeInSection direction="left">
-          <Testimonials />
+          <Projects />
         </FadeInSection>
 
         <FadeInSection direction="right">
@@ -42,7 +44,6 @@ export default function Home() {
           <Contact />
         </FadeInSection>
       </main>
-      <Footer />
     </>
   );
 }

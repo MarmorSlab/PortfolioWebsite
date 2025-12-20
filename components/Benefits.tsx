@@ -1,42 +1,41 @@
 "use client";
+
 import { motion, Variants } from "framer-motion";
 import { Zap, Smartphone, Target } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const iconVariants: Variants = {
     idle: { rotate: 0, scale: 1 },
     hovered: {
         rotate: 12,
         scale: 1.1,
-        transition: {
-            type: "spring",
-            stiffness: 300,
-            damping: 15
-        }
+        transition: { type: "spring", stiffness: 300, damping: 15 }
     },
 };
 
-export default function Testimonials() {
+export default function Benefits() {
     const benefits = [
         {
-            icon: <Zap className="w-10 h-10 text-amber-500" />,
+            icon: <Zap className="w-10 h-10 text-amber-500 fill-amber-500/10" />,
             title: "Lightning Fast",
             text: "Your website will load in under 2 seconds, keeping visitors engaged and improving your search rankings."
         },
         {
-            icon: <Smartphone className="w-10 h-10 text-blue-500" />,
+            icon: <Smartphone className="w-10 h-10 text-blue-500 fill-blue-500/10" />,
             title: "Mobile First",
             text: "Designed and optimized for all devices. Your site will look perfect on phones, tablets, and desktops."
         },
         {
-            icon: <Target className="w-10 h-10 text-red-500" />,
+            icon: <Target className="w-10 h-10 text-red-500 fill-red-500/10" />,
             title: "SEO Ready",
             text: "Built with search engine optimization in mind so customers can easily find your business online."
         }
     ];
 
     return (
-        <section className="py-24 px-6 bg-zinc-800">
+        <section className="py-24 px-6 bg-zinc-800 border-y border-zinc-700/50">
             <div className="max-w-6xl mx-auto">
+
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -44,10 +43,11 @@ export default function Testimonials() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                        Why Choose MarmorSlab
+                        The MarmorSlab Advantage
                     </h2>
                     <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-                        High-end design meets high-performance engineering.
+                        We combine computer engineering principles with modern design to build
+                        foundations that never crumble.
                     </p>
                 </motion.div>
 
@@ -56,21 +56,34 @@ export default function Testimonials() {
                         <motion.div
                             key={index}
                             initial="idle"
-                            whileHover="hovered" // 2. Trigger "hovered" variant for all children
-                            className="group bg-zinc-900 p-10 rounded-3xl border border-zinc-700/50 text-center transition-colors hover:border-blue-500/50"
+                            whileHover="hovered"
+                            viewport={{ once: true }}
+                            className={cn(
+                                "group relative p-10 rounded-3xl transition-all duration-300",
+                                "bg-zinc-900 border border-zinc-700/50",
+                                "hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/5"
+                            )}
                         >
+                        
                             <motion.div
-                                className="mb-6 inline-flex p-4 rounded-2xl bg-zinc-800 group-hover:bg-zinc-700 transition-colors"
-                                variants={iconVariants} // 3. Apply variants to the icon container
+                                variants={iconVariants}
+                                className="mb-8 inline-flex p-4 rounded-2xl bg-zinc-800 group-hover:bg-zinc-700 transition-colors duration-300"
                             >
                                 {benefit.icon}
                             </motion.div>
+
                             <h3 className="text-xl font-bold mb-4 text-white">
                                 {benefit.title}
                             </h3>
+
                             <p className="text-zinc-400 leading-relaxed">
                                 {benefit.text}
                             </p>
+
+                            
+                            <div className="absolute bottom-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
+                                {benefit.icon}
+                            </div>
                         </motion.div>
                     ))}
                 </div>
