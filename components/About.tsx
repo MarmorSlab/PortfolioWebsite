@@ -25,7 +25,7 @@ export function About() {
                             <p>
                                 Hi, I'm <span className="font-semibold text-slate-900 dark:text-white">Agustin</span>.
                                 As a Computer Engineering student, I look at the web differently.
-                                To me, a website isn't just a digital flyer—it's a high-performance system that needs to be
+                                To me, a website isn't just a digital flyer, it's a high-performance system that needs to be
                                 fast, secure, and efficient.
                             </p>
                             <p>
