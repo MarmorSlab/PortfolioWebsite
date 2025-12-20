@@ -10,8 +10,8 @@ export async function sendEmail(formData: { name: string; email: string; message
     }
     try {
         const { data, error } = await resend.emails.send({
-            from: 'Marmor Slab Contact <contact@marmorslab.dev>',
-            to: [process.env.CONTACT_EMAIL || ''],
+            from: 'Marmor Slab Contact Form <info@marmorslab.dev>',
+            to: ['info@marmorslab.dev'],
             subject: `New Business Inquiry from ${formData.name}`,
             replyTo: formData.email,
             text: `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`,

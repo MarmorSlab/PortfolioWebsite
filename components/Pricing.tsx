@@ -1,7 +1,12 @@
+"use client";
+import { motion } from "framer-motion";
+import { Check, Leaf, Briefcase, Crown, Sparkles } from "lucide-react";
+
 export default function Pricing() {
     const packages = [
         {
             name: "Starter",
+            icon: <Leaf className="w-6 h-6 text-green-500" />,
             price: "$499",
             description: "Perfect for small businesses just getting started",
             features: [
@@ -16,6 +21,7 @@ export default function Pricing() {
         },
         {
             name: "Professional",
+            icon: <Briefcase className="w-6 h-6 text-blue-500" />,
             price: "$999",
             description: "Ideal for growing businesses",
             features: [
@@ -32,6 +38,7 @@ export default function Pricing() {
         },
         {
             name: "Enterprise",
+            icon: <Crown className="w-6 h-6 text-amber-500" />,
             price: "Custom",
             description: "For complex projects and large businesses",
             features: [
@@ -50,61 +57,80 @@ export default function Pricing() {
     return (
         <section id="pricing" className="py-24 px-6 bg-white dark:bg-zinc-900">
             <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
                     <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900 dark:text-white">Simple, Transparent Pricing</h2>
-                    <p className="text-lg text-slate-600 dark:text-slate-300">
+                    <p className="text-lg text-slate-600 dark:text-slate-400">
                         Choose the package that fits your needs
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-8">
-                    {packages.map((pkg) => (
-                        <div
+                <div className="grid md:grid-cols-3 gap-8 items-start">
+                    {packages.map((pkg, index) => (
+                        <motion.div
                             key={pkg.name}
-                            className={`relative p-8 rounded-2xl border-2 transition-all hover:shadow-xl ${
-                                pkg.popular
-                                    ? "border-blue-600 dark:border-blue-500 shadow-lg scale-105"
-                                    : "border-slate-200 dark:border-zinc-700"
-                            } bg-white dark:bg-zinc-800`}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            whileHover={{ y: -8 }}
+                            className={`relative p-8 rounded-3xl border-2 transition-all duration-300 ${pkg.popular
+                                    ? "border-blue-600 dark:border-blue-500 shadow-2xl shadow-blue-500/10 scale-105 z-10 bg-white dark:bg-zinc-800"
+                                    : "border-slate-100 dark:border-zinc-800 bg-slate-50/50 dark:bg-zinc-800/40 hover:border-slate-200 dark:hover:border-zinc-700"
+                                }`}
                         >
                             {pkg.popular && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold flex items-center gap-1 uppercase tracking-wider">
+                                    <Sparkles className="w-3 h-3" />
                                     Most Popular
                                 </div>
                             )}
-                            <div className="text-center mb-6">
-                                <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">{pkg.name}</h3>
-                                <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                                    {pkg.price}
+
+                            <div className="mb-8">
+                                <div className="mb-4 inline-flex p-3 rounded-2xl bg-white dark:bg-zinc-900 shadow-sm border border-slate-100 dark:border-zinc-800">
+                                    {pkg.icon}
                                 </div>
-                                <p className="text-sm text-slate-600 dark:text-slate-300">
+                                <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">{pkg.name}</h3>
+                                <div className="flex items-baseline gap-1 mb-2">
+                                    <span className="text-4xl font-bold text-slate-900 dark:text-white">{pkg.price}</span>
+                                    {pkg.price !== "Custom" && <span className="text-slate-500 dark:text-zinc-500 text-sm">/project</span>}
+                                </div>
+                                <p className="text-sm text-slate-600 dark:text-zinc-400">
                                     {pkg.description}
                                 </p>
                             </div>
-                            <ul className="space-y-3 mb-8">
+
+                            <ul className="space-y-4 mb-8">
                                 {pkg.features.map((feature) => (
-                                    <li key={feature} className="flex items-start gap-2 text-sm">
-                                        <span className="text-blue-600 dark:text-blue-400 mt-0.5">✓</span>
-                                        <span className="text-slate-700 dark:text-slate-300">{feature}</span>
+                                    <li key={feature} className="flex items-start gap-3 text-sm">
+                                        <div className="flex-shrink-0 mt-0.5">
+                                            <Check className="w-4 h-4 text-blue-600 dark:text-blue-400" strokeWidth={3} />
+                                        </div>
+                                        <span className="text-slate-700 dark:text-zinc-300">{feature}</span>
                                     </li>
                                 ))}
                             </ul>
+
                             <a
                                 href="#contact"
-                                className={`block text-center py-3 rounded-lg font-semibold transition-all ${
-                                    pkg.popular
-                                        ? "bg-blue-600 text-white hover:bg-blue-700"
-                                        : "bg-slate-100 dark:bg-zinc-700 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-zinc-600"
-                                }`}
+                                className={`block text-center py-4 rounded-xl font-bold transition-all active:scale-95 ${pkg.popular
+                                        ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-500/20"
+                                        : "bg-slate-900 dark:bg-white text-white dark:text-zinc-900 hover:opacity-90"
+                                    }`}
                             >
                                 Get Started
                             </a>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-                
-                <p className="text-center text-sm text-slate-600 dark:text-slate-400 mt-8">
-                    All packages include free consultation and project scoping. Custom quotes available for unique requirements.
+
+                <p className="text-center text-sm text-slate-500 dark:text-zinc-500 mt-12 max-w-lg mx-auto leading-relaxed">
+                    All packages include free consultation and project scoping.
+                    Need something different? <a href="#contact" className="text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4">Let's build a custom plan.</a>
                 </p>
             </div>
         </section>

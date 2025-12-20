@@ -22,13 +22,7 @@ export default function Footer() {
                 <div>
                     <h4 className="font-semibold text-white mb-3">Contact</h4>
                     <div className="space-y-2 text-sm">
-                        <p>Email: hello@marmorslab.com</p>
-                        <p>Phone: (555) 123-4567</p>
-                        <div className="flex gap-4 mt-4">
-                            <a href="#" className="hover:text-blue-400 transition">Twitter</a>
-                            <a href="#" className="hover:text-blue-400 transition">LinkedIn</a>
-                            <a href="#" className="hover:text-blue-400 transition">GitHub</a>
-                        </div>
+                        <p>Email: info@marmorslab.dev</p>
                     </div>
                 </div>
             </div>

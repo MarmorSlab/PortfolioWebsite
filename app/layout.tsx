@@ -3,8 +3,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Agustin Marmor - Frontend Developer",
-  description: "Frontend developer building clean, fast, and accessible websites for small businesses.",
+  title: "MarmorSlab - Professional Web Development for Small Businesses",
+  description: "MarmorSlab offers expert web development services tailored for small businesses. We create stunning, responsive websites that drive growth and enhance your online presence.",
 };
 
 export default function RootLayout({children}: {children: React.ReactNode;}) {
