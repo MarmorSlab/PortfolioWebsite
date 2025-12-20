@@ -1,18 +1,43 @@
 "use client";
 
+import { sendEmail } from "@/app/actions";
 import { useState } from "react";
-
+import { useRouter } from "next/navigation"
 export function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+    const router = useRouter();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // handle form submit here (send to backend or email service)
-        alert("Message sent!");
+        const target = e.target as HTMLFormElement;
+        const botField = target.elements.namedItem("website") as HTMLInputElement;
+
+        if (botField?.value) {
+            console.warn("Bot detected.");
+            router.push("/thank-you");
+            return;
+        }
+
+        setIsSubmitting(true);
+
+
+        const result = await sendEmail(formData);
+
+
+        if (result.success) {
+            router.push("/thank-you");
+        } else {
+            alert("There was an error sending your message. Please try again later.");
+            setIsSubmitting(false);
+        }
+
+        setIsSubmitting(false);
     };
 
     return (
@@ -25,6 +50,15 @@ export function Contact() {
                     onSubmit={handleSubmit}
                     className="p-8 shadow-lg border-2 border-blue-100 dark:border-blue-900 bg-white/80 dark:bg-zinc-900/80 rounded-2xl flex flex-col gap-6"
                 >
+                    {/* --- Honeypot Field --- */}
+                    <input
+                        type="text"
+                        name="website"
+                        className="hidden"
+                        tabIndex={-1}
+                        autoComplete="off"
+                    />
+                    {/* ---------------------- */}
                     <label className="flex flex-col text-left">
                         <span className="mb-1 font-semibold text-slate-700 dark:text-slate-300">Name</span>
                         <input
@@ -55,13 +89,12 @@ export function Contact() {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            
+
                             required
                             rows={6}
                             className="resize-y min-h-[120px] max-h-[320px] rounded-lg border border-slate-300 dark:border-slate-700 p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 bg-white dark:bg-zinc-800 text-slate-900 dark:text-slate-100"
                         />
                     </label>
-
                     <button
                         type="submit"
                         className="self-end px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold transition-transform duration-200 hover:scale-105 hover:shadow-lg"

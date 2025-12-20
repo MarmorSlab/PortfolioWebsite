@@ -29,7 +29,7 @@ export default function Testimonials() {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-3xl font-semibold mb-3 text-slate-900 dark:text-white">Why Choose Me</h2>
+                    <h2 className="text-3xl font-semibold mb-3 text-slate-900 dark:text-white">Why Choose Us</h2>
                     <p className="text-slate-600 dark:text-slate-300">
                         Modern solutions for your business
                     </p>
