@@ -33,7 +33,7 @@ export default function Benefits() {
     ];
 
     return (
-        <section className="py-24 px-6 bg-zinc-800 border-y border-zinc-700/50">
+        <section id="benefits" className="py-24 px-6 bg-zinc-800 border-y border-zinc-700/50">
             <div className="max-w-6xl mx-auto">
 
                 <motion.div
