@@ -17,8 +17,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.marmorslab.dev"),
   title: {
-    default: 'MarmorSlab | Professional Web Engineering',
-    template: '%s | MarmorSlab'
+    default: 'MarmorSlab | Web Engineering by Agustin Marmor',
+    template: '%s | Agustin Marmor'
   },
   description: 'Engineering high-performance digital foundations. Designed in the lab, built to be the slab by Agustin Marmor.',
   keywords: ['Web Development', 'Computer Engineering', 'Next.js', 'Custom Websites', 'MarmorSlab'],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.marmorslab.dev',
     siteName: 'MarmorSlab',
-    title: 'MarmorSlab | Professional Web Engineering',
+    title: 'MarmorSlab | Web Engineering by Agustin Marmor',
     description: 'Modern web solutions engineered for performance and reliability.',
   },
   twitter: {

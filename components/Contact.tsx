@@ -2,12 +2,13 @@
 
 import { sendEmail } from "@/app/actions";
 import { useState } from "react";
-import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation";
+import { Send, Loader2 } from "lucide-react";
+
 export function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
-
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,36 +20,43 @@ export function Contact() {
         const botField = target.elements.namedItem("website") as HTMLInputElement;
 
         if (botField?.value) {
-            console.warn("Bot detected.");
             router.push("/thank-you");
             return;
         }
 
         setIsSubmitting(true);
 
-
-        const result = await sendEmail(formData);
-
-
-        if (result.success) {
-            router.push("/thank-you");
-        } else {
-            alert("There was an error sending your message. Please try again later.");
+        try {
+            const result = await sendEmail(formData);
+            if (result.success) {
+                router.push("/thank-you");
+            } else {
+                alert("There was an error sending your message. Please try again later.");
+            }
+        } catch (error) {
+            alert("An unexpected error occurred.");
+        } finally {
             setIsSubmitting(false);
         }
-
-        setIsSubmitting(false);
     };
 
     return (
-        <section id="contact" className="py-20 bg-white dark:bg-zinc-900">
-            <h2 className="mb-8 text-3xl font-bold text-center tracking-tight text-slate-900 dark:text-white">
-                Contact
-            </h2>
+        <section id="contact" className="py-24 px-6 bg-white dark:bg-zinc-950">
+            <div className="max-w-xl mx-auto text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
+                    Start Your Project
+                </h2>
+                {/* Legal anchor: Links the brand to Agustin Marmor for $0 compliance */}
+                <p className="text-slate-600 dark:text-zinc-400">
+                    Submit your details and <strong>Agustin Marmor</strong> will reach out within 24 hours
+                    to discuss your MarmorSlab foundation.
+                </p>
+            </div>
+
             <div className="max-w-xl mx-auto">
                 <form
                     onSubmit={handleSubmit}
-                    className="p-8 shadow-lg border-2 border-blue-100 dark:border-blue-900 bg-white/80 dark:bg-zinc-900/80 rounded-2xl flex flex-col gap-6"
+                    className="p-8 shadow-2xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 rounded-2xl flex flex-col gap-6 backdrop-blur-sm"
                 >
                     {/* --- Honeypot Field --- */}
                     <input
@@ -58,52 +66,69 @@ export function Contact() {
                         tabIndex={-1}
                         autoComplete="off"
                     />
-                    {/* ---------------------- */}
-                    <label className="flex flex-col text-left">
-                        <span className="mb-1 font-semibold text-slate-700 dark:text-slate-300">Name</span>
-                        <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            className="rounded-md border border-slate-300 dark:border-slate-700 p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 bg-white dark:bg-zinc-800 text-slate-900 dark:text-slate-100"
-                        />
-                    </label>
 
-                    <label className="flex flex-col text-left">
-                        <span className="mb-1 font-semibold text-slate-700 dark:text-slate-300">Email</span>
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            className="rounded-md border border-slate-300 dark:border-slate-700 p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-fuchsia-500 bg-white dark:bg-zinc-800 text-slate-900 dark:text-slate-100"
-                        />
-                    </label>
+                    <div className="grid gap-6">
+                        <label className="flex flex-col text-left">
+                            <span className="mb-2 text-sm font-semibold text-slate-700 dark:text-zinc-300">Full Name</span>
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Your Name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                                className="rounded-xl border border-slate-200 dark:border-zinc-800 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-zinc-950 text-slate-900 dark:text-white transition-all"
+                            />
+                        </label>
 
-                    <label className="flex flex-col text-left">
-                        <span className="mb-1 font-semibold text-slate-700 dark:text-slate-300">Message</span>
-                        <textarea
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
+                        <label className="flex flex-col text-left">
+                            <span className="mb-2 text-sm font-semibold text-slate-700 dark:text-zinc-300">Business Email</span>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="name@company.com"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                                className="rounded-xl border border-slate-200 dark:border-zinc-800 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-zinc-950 text-slate-900 dark:text-white transition-all"
+                            />
+                        </label>
 
-                            required
-                            rows={6}
-                            className="resize-y min-h-[120px] max-h-[320px] rounded-lg border border-slate-300 dark:border-slate-700 p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-500 bg-white dark:bg-zinc-800 text-slate-900 dark:text-slate-100"
-                        />
-                    </label>
+                        <label className="flex flex-col text-left">
+                            <span className="mb-2 text-sm font-semibold text-slate-700 dark:text-zinc-300">Project Details</span>
+                            <textarea
+                                name="message"
+                                placeholder="Describe your business needs..."
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                                rows={5}
+                                className="resize-none rounded-xl border border-slate-200 dark:border-zinc-800 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-zinc-950 text-slate-900 dark:text-white transition-all"
+                            />
+                        </label>
+                    </div>
+
                     <button
                         type="submit"
-                        className="self-end px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold transition-transform duration-200 hover:scale-105 hover:shadow-lg"
+                        disabled={isSubmitting}
+                        className="group flex items-center justify-center gap-2 w-full py-4 bg-blue-600 text-white rounded-xl text-lg font-bold transition-all hover:bg-blue-700 disabled:opacity-70 disabled:cursor-not-allowed hover:shadow-xl hover:shadow-blue-500/20 active:scale-[0.98]"
                     >
-                        Send Message
+                        {isSubmitting ? (
+                            <>
+                                <Loader2 className="w-5 h-5 animate-spin" />
+                                Processing...
+                            </>
+                        ) : (
+                            <>
+                                Send Inquiry
+                                <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                            </>
+                        )}
                     </button>
                 </form>
             </div>
         </section>
     );
 }
+
 export default Contact;

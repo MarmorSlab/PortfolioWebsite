@@ -18,10 +18,10 @@ export default function Hero() {
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="max-w-4xl text-center space-y-8"
             >
-                
+
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-full text-blue-700 dark:text-blue-400 text-sm font-medium mb-4">
                     <BadgeCheck className="w-4 h-4" />
-                    <span>Computer Engineering Student · Modern Web Solutions</span>
+                    <span>Agustin Marmor · Computer Engineering Student ·</span>
                 </div>
 
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
@@ -52,7 +52,7 @@ export default function Hero() {
                     </a>
                 </div>
 
-                
+
                 <div className="flex flex-wrap justify-center gap-8 pt-12 text-sm font-medium text-slate-600 dark:text-slate-400">
                     <div className="flex items-center gap-2 bg-slate-50 dark:bg-zinc-800/50 px-3 py-1.5 rounded-lg border border-slate-100 dark:border-zinc-800">
                         <Zap className="w-4 h-4 text-amber-500 fill-amber-500/10" />

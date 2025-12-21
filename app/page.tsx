@@ -6,7 +6,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import { FadeInSection } from "@/components/FadeInSection";
 import Pricing from "@/components/Pricing";
-import { About } from "@/components/About";
+import About from "@/components/About";
 import Benefits from "@/components/Benefits";
 import Footer from "@/components/Footer";
 import Process from "@/components/Process";

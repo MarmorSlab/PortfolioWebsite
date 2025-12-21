@@ -36,12 +36,17 @@ export default function Navbar() {
             )}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
-            
-                <Link href="/" className="hover:opacity-90 transition-opacity">
-                    <Logo variant="full" className="scale-90 md:scale-100 origin-left" />
+
+                <Link href="/" className="group flex flex-col hover:opacity-90 transition-opacity">
+                    <div className="flex items-center gap-2">
+                        <Logo variant="full" className="scale-90 md:scale-100 origin-left" />
+                    </div>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400 font-bold ml-1 opacity-80 group-hover:opacity-100 transition-opacity">
+                        By Agustin Marmor
+                    </span>
                 </Link>
 
-    
+
                 <nav className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
                         <Link
