@@ -1,10 +1,21 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { cn } from "@/lib/utils";
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#09090b" }, // zinc-950
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.marmorslab.dev"),
   title: {
     default: 'MarmorSlab | Professional Web Engineering',
     template: '%s | MarmorSlab'
@@ -16,24 +27,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://marmorslab.dev',
+    url: 'https://www.marmorslab.dev',
     siteName: 'MarmorSlab',
     title: 'MarmorSlab | Professional Web Engineering',
     description: 'Modern web solutions engineered for performance and reliability.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'MarmorSlab Branding',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'MarmorSlab | Web Engineering',
     description: 'Engineering high-performance digital foundations.',
-    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -43,16 +45,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode; }) {
   return (
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
 
-    <html lang="en" className="scroll-smooth">
-      <body className="antialiased bg-white dark:bg-zinc-900 text-slate-900 dark:text-zinc-100">
+      <body className="antialiased bg-white dark:bg-zinc-950 text-slate-900 dark:text-zinc-100 min-h-screen flex flex-col">
         <Navbar />
-        {children}
-        <Footer />
 
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
         <SpeedInsights />
       </body>
     </html>
-
   );
 }
