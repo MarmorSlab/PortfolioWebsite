@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://marmorslab.dev/sitemap.xml',
+        sitemap: 'https://www.marmorslab.dev/sitemap.xml',
     }
 }
