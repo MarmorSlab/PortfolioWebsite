@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: {
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://marmorslab.dev', 
+    url: 'https://marmorslab.dev',
     siteName: 'MarmorSlab',
     title: 'MarmorSlab | Professional Web Engineering',
     description: 'Modern web solutions engineered for performance and reliability.',
     images: [
       {
-        url: '/og-image.png', 
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'MarmorSlab Branding',
@@ -43,12 +43,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode; }) {
   return (
+
     <html lang="en" className="scroll-smooth">
       <body className="antialiased bg-white dark:bg-zinc-900 text-slate-900 dark:text-zinc-100">
         <Navbar />
         {children}
         <Footer />
+
+        <SpeedInsights />
       </body>
     </html>
+
   );
 }
