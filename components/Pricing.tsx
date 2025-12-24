@@ -1,58 +1,35 @@
 "use client";
 import { motion } from "framer-motion";
 import { Check, Leaf, Briefcase, Crown, Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Pricing() {
-    const packages = [
+    const t = useTranslations("pricing");
+    const packageConfig = [
         {
-            name: "Starter",
+            key: "starter",
             icon: <Leaf className="w-6 h-6 text-green-500" />,
-            price: "$499",
-            description: "Perfect for small businesses just getting started",
-            features: [
-                "Up to 5 pages",
-                "Mobile responsive",
-                "Contact form",
-                "Basic SEO setup",
-                "2 rounds of revisions",
-                "2-week delivery"
-            ],
             popular: false
         },
         {
-            name: "Professional",
+            key: "professional",
             icon: <Briefcase className="w-6 h-6 text-blue-500" />,
-            price: "$999",
-            description: "Ideal for growing businesses",
-            features: [
-                "Up to 10 pages",
-                "Advanced animations",
-                "CMS integration",
-                "Advanced SEO",
-                "Analytics setup",
-                "Unlimited revisions",
-                "3-week delivery",
-                "1 month support"
-            ],
             popular: true
         },
         {
-            name: "Enterprise",
+            key: "enterprise",
             icon: <Crown className="w-6 h-6 text-amber-500" />,
-            price: "Custom",
-            description: "For complex projects and large businesses",
-            features: [
-                "All features of Professional",
-                "Unlimited pages",
-                "Custom features",
-                "Priority support",
-                "Performance optimization",
-                "Ongoing maintenance",
-                "Flexible timeline"
-            ],
             popular: false
         }
-    ];
+    ] as const;
+
+    const packages = packageConfig.map((pkg) => ({
+        ...pkg,
+        name: t(`${pkg.key}.name`),
+        price: t(`${pkg.key}.price`),
+        description: t(`${pkg.key}.description`),
+        features: t.raw(`${pkg.key}.features`) as string[]
+    }));
 
     return (
         <section id="pricing" className="py-24 px-6 bg-white dark:bg-zinc-900">
@@ -63,9 +40,9 @@ export default function Pricing() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900 dark:text-white">Simple, Transparent Pricing</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900 dark:text-white">{t("title")}</h2>
                     <p className="text-lg text-slate-600 dark:text-slate-400">
-                        Choose the package that fits your needs
+                        {t("subtitle")}
                     </p>
                 </motion.div>
 
@@ -86,7 +63,7 @@ export default function Pricing() {
                             {pkg.popular && (
                                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-xs font-bold flex items-center gap-1 uppercase tracking-wider">
                                     <Sparkles className="w-3 h-3" />
-                                    Most Popular
+                                    {t("popular")}
                                 </div>
                             )}
 
@@ -97,7 +74,7 @@ export default function Pricing() {
                                 <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">{pkg.name}</h3>
                                 <div className="flex items-baseline gap-1 mb-2">
                                     <span className="text-4xl font-bold text-slate-900 dark:text-white">{pkg.price}</span>
-                                    {pkg.price !== "Custom" && <span className="text-slate-500 dark:text-zinc-500 text-sm">/project</span>}
+                                    {pkg.price.toLowerCase() !== "custom" && <span className="text-slate-500 dark:text-zinc-500 text-sm">/project</span>}
                                 </div>
                                 <p className="text-sm text-slate-600 dark:text-zinc-400">
                                     {pkg.description}
@@ -122,15 +99,14 @@ export default function Pricing() {
                                         : "bg-slate-900 dark:bg-white text-white dark:text-zinc-900 hover:opacity-90"
                                     }`}
                             >
-                                Get Started
+                                {t("cta")}
                             </a>
                         </motion.div>
                     ))}
                 </div>
 
                 <p className="text-center text-sm text-slate-500 dark:text-zinc-500 mt-12 max-w-lg mx-auto leading-relaxed">
-                    All packages include free consultation and project scoping.
-                    Need something different? <a href="#contact" className="text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4">Let's build a custom plan.</a>
+                    {t("footer")} <a href="#contact" className="text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4">{t("customPlanLink")}</a>
                 </p>
             </div>
         </section>

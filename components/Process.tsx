@@ -3,30 +3,30 @@
 import { motion } from "framer-motion";
 import { Microscope, Ruler, HardHat, Rocket } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 export default function Process() {
+    const t = useTranslations("process");
+    const stepsData = t.raw("steps") as Array<{ title: string; description: string }>;
+    
     const steps = [
         {
-            title: "The Lab",
-            desc: "We start with deep research. I analyze your goals, your competitors, and the technical requirements to build a bulletproof strategy.",
+            ...stepsData[0],
             icon: <Microscope className="w-6 h-6" />,
             color: "text-blue-500",
         },
         {
-            title: "The Blueprint",
-            desc: "Using engineering principles, I map out the site architecture and user flow to ensure every click has a purpose.",
+            ...stepsData[1],
             icon: <Ruler className="w-6 h-6" />,
             color: "text-amber-500",
         },
         {
-            title: "The Chisel",
-            desc: "This is the build phase. I write clean, optimized code (Next.js & Tailwind) to chisel out a high-performance digital product.",
+            ...stepsData[2],
             icon: <HardHat className="w-6 h-6" />,
             color: "text-emerald-500",
         },
         {
-            title: "The Slab",
-            desc: "The final result: a solid, unbreakable foundation for your business. We launch, optimize, and ensure everything is rock-solid.",
+            ...stepsData[3],
             icon: <Rocket className="w-6 h-6" />,
             color: "text-purple-500",
         },
@@ -38,10 +38,10 @@ export default function Process() {
 
                 <div className="text-center mb-20">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-                        The Lab-to-Slab Method
+                        {t("title")}
                     </h2>
                     <p className="text-lg text-slate-600 dark:text-zinc-400 max-w-2xl mx-auto">
-                        A structured engineering approach to building your digital presence.
+                        {t("subtitle")}
                     </p>
                 </div>
 
@@ -72,13 +72,13 @@ export default function Process() {
 
                             <div className="px-4">
                                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-600 dark:text-blue-500 mb-2 block">
-                                    Phase 0{i + 1}
+                                    {t("phaseLabel")} 0{i + 1}
                                 </span>
                                 <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">
                                     {step.title}
                                 </h3>
                                 <p className="text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">
-                                    {step.desc}
+                                    {step.description}
                                 </p>
                             </div>
                         </motion.div>

@@ -1,23 +1,26 @@
 import { Palette, Code2, Rocket, Check } from "lucide-react";
+import { useTranslations } from "next-intl";
+
 export default function Services() {
+    const t = useTranslations("services");
     const services = [
         {
             icon: <Palette className="w-8 h-8 text-blue-600 dark:text-blue-400" />,
-            title: "Custom Design",
-            description: "Clear, modern layouts focused on usability and your brand identity.",
-            features: ["Mobile-first design", "Brand integration", "User experience focus"]
+            title: t("service1.title"),
+            description: t("service1.description"),
+            features: t.raw("service1.features") as string[]
         },
         {
             icon: <Code2 className="w-8 h-8 text-blue-600 dark:text-blue-400" />,
-            title: "Development",
-            description: "Fast, accessible, SEO-optimized websites built with modern technology.",
-            features: ["Lightning-fast loading", "SEO optimized", "Fully responsive"]
+            title: t("service2.title"),
+            description: t("service2.description"),
+            features: t.raw("service2.features") as string[]
         },
         {
             icon: <Rocket className="w-8 h-8 text-blue-600 dark:text-blue-400" />,
-            title: "Launch & Support",
-            description: "Smooth deployment with ongoing maintenance and updates included.",
-            features: ["Free hosting setup", "SSL certificate", "30-day support"]
+            title: t("service3.title"),
+            description: t("service3.description"),
+            features: t.raw("service3.features") as string[]
         },
     ];
 
@@ -25,9 +28,9 @@ export default function Services() {
         <section id="services" className="py-24 px-6 bg-white dark:bg-zinc-900">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900 dark:text-white">What You Get</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900 dark:text-white">{t("title")}</h2>
                     <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-                        Everything you need to establish a professional online presence
+                        {t("subtitle")}
                     </p>
                 </div>
 

@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { CheckCircle2, ArrowLeft, Calendar, Mail } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 export default function ThankYou() {
+    const t = useTranslations('thankYou');
+
     return (
         <main className="min-h-[80vh] flex items-center justify-center px-6 bg-white dark:bg-zinc-950">
             <motion.div
@@ -32,27 +35,24 @@ export default function ThankYou() {
                 </div>
 
                 <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-                    Inquiry Received
+                    {t('title')}
                 </h1>
 
-                <p className="text-xl text-slate-600 dark:text-zinc-400 mb-12 leading-relaxed">
-                    Thank you for reaching out. <strong>Agustin Marmor</strong> has received your project
-                    details and is currently reviewing the technical requirements for your new foundation.
-                </p>
+                <p className="text-xl text-slate-600 dark:text-zinc-400 mb-12 leading-relaxed" dangerouslySetInnerHTML={{ __html: t('subtitle') }} />
 
                 <div className="grid sm:grid-cols-2 gap-6 mb-12 text-left">
                     <div className="p-6 bg-slate-50 dark:bg-zinc-900/50 rounded-2xl border border-slate-100 dark:border-zinc-800">
                         <Mail className="w-6 h-6 text-blue-600 mb-4" />
-                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">Check Your Inbox</h3>
+                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">{t('checkInbox.title')}</h3>
                         <p className="text-sm text-slate-600 dark:text-zinc-400">
-                            A confirmation email has been sent to you. Please check your spam folder if you don't see it.
+                            {t('checkInbox.description')}
                         </p>
                     </div>
                     <div className="p-6 bg-slate-50 dark:bg-zinc-900/50 rounded-2xl border border-slate-100 dark:border-zinc-800">
                         <Calendar className="w-6 h-6 text-blue-600 mb-4" />
-                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">Next Steps</h3>
+                        <h3 className="font-bold text-slate-900 dark:text-white mb-2">{t('nextSteps.title')}</h3>
                         <p className="text-sm text-slate-600 dark:text-zinc-400">
-                            Agustin will contact you within 24 business hours to schedule a discovery call.
+                            {t('nextSteps.description')}
                         </p>
                     </div>
                 </div>
@@ -62,11 +62,11 @@ export default function ThankYou() {
                     className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-zinc-950 rounded-xl font-bold transition-all hover:scale-105 active:scale-95"
                 >
                     <ArrowLeft className="w-5 h-5" />
-                    Back to MarmorSlab
+                    {t('backButton')}
                 </Link>
 
                 <p className="mt-12 text-xs text-slate-400 dark:text-zinc-600 italic">
-                    All business communications are handled directly by Agustin Marmor.
+                    {t('notice')}
                 </p>
             </motion.div>
         </main>

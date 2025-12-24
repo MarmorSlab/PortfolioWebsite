@@ -1,17 +1,20 @@
+import { useTranslations } from "next-intl";
+
 export default function Projects() {
+    const t = useTranslations("projects");
     const projects = [
         {
-            title: "Restaurant Website",
-            description: "Beautiful website concept with online reservations and menu showcase.",
-            metrics: ["Responsive design", "Modern UI"],
-            tech: "React · TypeScript · Framer Motion",
+            title: t("project1.title"),
+            description: t("project1.description"),
+            metrics: t.raw("project1.metrics") as string[],
+            tech: t("project1.tech"),
             image: "bg-gradient-to-br from-blue-500 to-cyan-500"
         },
         {
-            title: "Business Portfolio",
-            description: "Clean, professional website design with contact forms and service pages.",
-            metrics: ["SEO ready", "Performance focused"],
-            tech: "Next.js · Tailwind · Vercel",
+            title: t("project2.title"),
+            description: t("project2.description"),
+            metrics: t.raw("project2.metrics") as string[],
+            tech: t("project2.tech"),
             image: "bg-gradient-to-br from-green-500 to-emerald-500"
         },
     ];
@@ -20,9 +23,9 @@ export default function Projects() {
         <section id="projects" className="py-24 px-6 bg-slate-50 dark:bg-zinc-800">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900 dark:text-white">Example Projects</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900 dark:text-white">{t("title")}</h2>
                     <p className="text-lg text-slate-600 dark:text-slate-300">
-                        Concept designs showcasing modern web solutions
+                        {t("subtitle")}
                     </p>
                 </div>
 

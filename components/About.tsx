@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Cpu, Globe, Code2, GraduationCap } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function About() {
+    const t = useTranslations("about");
+    const cards = Object.values(
+        t.raw("cards") as Record<string, { label: string; description: string }>
+    );
     return (
         <section id="about" className="py-24 px-6 bg-white dark:bg-zinc-950 overflow-hidden">
             <div className="max-w-5xl mx-auto">
@@ -17,21 +22,15 @@ export default function About() {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900 dark:text-white">
-                            Engineering Precision <br />
-                            <span className="text-blue-600 dark:text-blue-400">meets Business Growth</span>
+                            {t("heading")} <br />
+                            <span className="text-blue-600 dark:text-blue-400">{t("highlight")}</span>
                         </h2>
 
                         <div className="space-y-4 text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
-                            <p>
-                                Hi, I'm <span className="font-semibold text-slate-900 dark:text-white">Agustin Marmor</span>.
-                                As a Computer Engineering student based in Kissimmee, I look at the web as a technical system, not just a design project.
-                            </p>
-                            <p>
-                                Under my professional brand, <strong>MarmorSlab</strong>, I engineer high-performance digital foundations for small businesses.
-                                My approach is simple: a website should be as solid and unbreakable as a concrete slab. Optimized for speed, security, and search engine visibility.
-                            </p>
+                            <p>{t("paragraph1")}</p>
+                            <p>{t("paragraph2")}</p>
                             <p className="font-medium text-blue-600 dark:text-blue-400">
-                                I bridge the gap between complex engineering and clean, effective business solutions.
+                                {t("highlightText")}
                             </p>
                         </div>
                     </motion.div>
@@ -39,26 +38,10 @@ export default function About() {
                 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {[
-                            {
-                                icon: <Cpu className="w-5 h-5" />,
-                                label: "Engineering Mindset",
-                                desc: "Logical, structured, and scalable code architecture."
-                            },
-                            {
-                                icon: <Code2 className="w-5 h-5" />,
-                                label: "Modern Tech",
-                                desc: "Next.js and React foundations for maximum performance."
-                            },
-                            {
-                                icon: <Globe className="w-5 h-5" />,
-                                label: "SEO Optimized",
-                                desc: "Built to be found by Google and local customers."
-                            },
-                            {
-                                icon: <GraduationCap className="w-5 h-5" />,
-                                label: "Computer Engineering",
-                                desc: "Applying university-grade logic to web challenges."
-                            },
+                            { icon: <Cpu className="w-5 h-5" />, ...cards[0] },
+                            { icon: <Code2 className="w-5 h-5" />, ...cards[1] },
+                            { icon: <Globe className="w-5 h-5" />, ...cards[2] },
+                            { icon: <GraduationCap className="w-5 h-5" />, ...cards[3] }
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
@@ -72,7 +55,7 @@ export default function About() {
                                     {item.icon}
                                 </div>
                                 <h4 className="font-bold text-slate-900 dark:text-white mb-1">{item.label}</h4>
-                                <p className="text-sm text-slate-600 dark:text-zinc-400 leading-snug">{item.desc}</p>
+                                <p className="text-sm text-slate-600 dark:text-zinc-400 leading-snug">{item.description}</p>
                             </motion.div>
                         ))}
                     </div>

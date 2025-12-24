@@ -1,0 +1,293 @@
+{
+    "hero": {
+        "badge": "Computer Engineering Student · Modern Web Solutions",
+        "title": "Professional websites that",
+        "titleGradient": "drive real results",
+        "subtitle": "Affordable, custom websites built with the latest technology. Clean design, fast performance, and SEO optimized to help your business stand out.",
+        "cta1": "Get a Free Quote",
+        "cta2": "View My Work",
+        "trust1": "Fast Delivery",
+        "trust2": "100% Satisfaction",
+        "trust3": "Secure & Reliable"
+    },
+    "about": {
+        "title": "About Me",
+        "heading": "Engineering Precision",
+        "highlight": "meets Business Growth",
+        "paragraph1": "Hi, I'm Agustin Marmor, a Computer Engineering student in Kissimmee who treats the web like a technical system—not just a design project.",
+        "paragraph2": "Under my professional brand, MarmorSlab, I engineer high-performance digital foundations for small businesses. My approach is simple: a website should be as solid and unbreakable as a concrete slab. Optimized for speed, security, and search visibility.",
+        "highlightText": "I bridge the gap between complex engineering and clean, effective business solutions.",
+        "cards": {
+            "engineering": {
+                "label": "Engineering Mindset",
+                "description": "Logical, structured, and scalable code architecture."
+            },
+            "modernTech": {
+                "label": "Modern Tech",
+                "description": "Next.js and React foundations for maximum performance."
+            },
+            "seo": {
+                "label": "SEO Optimized",
+                "description": "Built to be found by Google and local customers."
+            },
+            "education": {
+                "label": "Computer Engineering",
+                "description": "Applying university-grade logic to web challenges."
+            }
+        }
+    },
+    "services": {
+        "title": "What You Get",
+        "subtitle": "Everything you need to establish a professional online presence",
+        "service1": {
+            "title": "Custom Design",
+            "description": "Clear, modern layouts focused on usability and your brand identity.",
+            "features": [
+                "Mobile-first design",
+                "Brand integration",
+                "User experience focus"
+            ]
+        },
+        "service2": {
+            "title": "Development",
+            "description": "Fast, accessible, SEO-optimized websites built with modern technology.",
+            "features": [
+                "Lightning-fast loading",
+                "SEO optimized",
+                "Fully responsive"
+            ]
+        },
+        "service3": {
+            "title": "Launch & Support",
+            "description": "Smooth deployment with ongoing maintenance and updates included.",
+            "features": [
+                "Free hosting setup",
+                "SSL certificate",
+                "30-day support"
+            ]
+        }
+    },
+    "projects": {
+        "title": "Example Projects",
+        "subtitle": "Concept designs showcasing modern web solutions",
+        "project1": {
+            "title": "Restaurant Website",
+            "description": "Beautiful website concept with online reservations and menu showcase.",
+            "metrics": [
+                "Responsive design",
+                "Modern UI"
+            ],
+            "tech": "React · TypeScript · Framer Motion"
+        },
+        "project2": {
+            "title": "Business Portfolio",
+            "description": "Clean, professional website design with contact forms and service pages.",
+            "metrics": [
+                "SEO ready",
+                "Performance focused"
+            ],
+            "tech": "Next.js · Tailwind · Vercel"
+        }
+    },
+    "testimonials": {
+        "title": "The MarmorSlab Advantage",
+        "subtitle": "We combine computer engineering principles with modern design to build foundations that never crumble.",
+        "benefit1": {
+            "title": "Lightning Fast",
+            "text": "Your website will load in under 2 seconds, keeping visitors engaged and improving your search rankings."
+        },
+        "benefit2": {
+            "title": "Mobile First",
+            "text": "Designed and optimized for all devices. Your site will look perfect on phones, tablets, and desktops."
+        },
+        "benefit3": {
+            "title": "SEO Ready",
+            "text": "Built with search engine optimization in mind so customers can easily find your business online."
+        }
+    },
+    "pricing": {
+        "title": "Simple, Transparent Pricing",
+        "subtitle": "Choose the package that fits your needs",
+        "popular": "Most Popular",
+        "cta": "Get Started",
+        "footer": "All packages include free consultation and project scoping. Custom quotes available for unique requirements.",
+        "customPlanLink": "Need something different? Let's build a custom plan.",
+        "starter": {
+            "name": "Starter",
+            "price": "$499",
+            "description": "Perfect for small businesses just getting started",
+            "features": [
+                "Up to 5 pages",
+                "Mobile responsive",
+                "Contact form",
+                "Basic SEO setup",
+                "2 rounds of revisions",
+                "2-week delivery"
+            ]
+        },
+        "professional": {
+            "name": "Professional",
+            "price": "$999",
+            "description": "Ideal for growing businesses",
+            "features": [
+                "Up to 10 pages",
+                "Advanced animations",
+                "CMS integration",
+                "Advanced SEO",
+                "Analytics setup",
+                "Unlimited revisions",
+                "3-week delivery",
+                "1 month support"
+            ]
+        },
+        "enterprise": {
+            "name": "Enterprise",
+            "price": "Custom",
+            "description": "For complex projects and large businesses",
+            "features": [
+                "Unlimited pages",
+                "Custom features",
+                "Priority support",
+                "Performance optimization",
+                "Ongoing maintenance",
+                "Flexible timeline"
+            ]
+        }
+    },
+    "process": {
+        "title": "The Lab-to-Slab Method",
+        "subtitle": "A structured engineering approach to building your digital presence.",
+        "phaseLabel": "Phase",
+        "steps": [
+            {
+                "title": "The Lab",
+                "description": "We start with deep research. I analyze your goals, competitors, and the technical requirements to build a bulletproof strategy."
+            },
+            {
+                "title": "The Blueprint",
+                "description": "Using engineering principles, I map out the site architecture and user flow to ensure every click has a purpose."
+            },
+            {
+                "title": "The Chisel",
+                "description": "This is the build phase. I write clean, optimized code (Next.js & Tailwind) to chisel out a high-performance digital product."
+            },
+            {
+                "title": "The Slab",
+                "description": "The final result: a solid, unbreakable foundation for your business. We launch, optimize, and ensure everything is rock-solid."
+            }
+        ]
+    },
+    "contact": {
+        "title": "Start Your Project",
+        "subtitle": "Submit your details and <strong>Agustin Marmor</strong> will reach out within 24 hours to discuss your MarmorSlab foundation.",
+        "nameLabel": "Full Name",
+        "namePlaceholder": "Your Name",
+        "emailLabel": "Business Email",
+        "emailPlaceholder": "name@company.com",
+        "messageLabel": "Project Details",
+        "messagePlaceholder": "Describe your business needs...",
+        "submitButton": "Send Inquiry",
+        "submitProcessing": "Processing...",
+        "successMessage": "Message sent successfully! We'll get back to you soon.",
+        "errorMessage": "There was an error sending your message. Please try again later.",
+        "unexpectedError": "An unexpected error occurred."
+    },
+    "footer": {
+        "tagline": "Engineering high-performance digital foundations for modern businesses. Designed in the lab, built to be the slab.",
+        "signature": "Web Engineering by Agustin Marmor",
+        "connect": "Connect",
+        "availabilityTitle": "Availability",
+        "availabilityStatus": "Taking new business clients",
+        "legalNote": "MarmorSlab is a portfolio brand operated by Agustin Marmor.",
+        "ownerLine": "© {year} Agustin Marmor.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "email": "info@marmorslab.dev",
+        "social": {
+            "linkedin": "LinkedIn",
+            "github": "GitHub",
+            "email": "Email"
+        }
+    },
+    "navbar": {
+        "about": "About",
+        "services": "Services",
+        "work": "Work",
+        "pricing": "Pricing",
+        "contact": "Contact"
+    },
+    "thankYou": {
+        "title": "Inquiry Received",
+        "subtitle": "Thank you for reaching out. <strong>Agustin Marmor</strong> has received your project details and is currently reviewing the technical requirements for your new foundation.",
+        "checkInbox": {
+            "title": "Check Your Inbox",
+            "description": "A confirmation email has been sent to you. Please check your spam folder if you don't see it."
+        },
+        "nextSteps": {
+            "title": "Next Steps",
+            "description": "Agustin will contact you within 24 business hours to schedule a discovery call."
+        },
+        "backButton": "Back to MarmorSlab",
+        "notice": "All business communications are handled directly by Agustin Marmor."
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last Updated: December 20, 2025",
+        "section1": {
+            "title": "1. Information Collected by Agustin Marmor",
+            "content": "This policy describes how <strong>Agustin Marmor</strong> (operating under the portfolio brand \"MarmorSlab\") collects and handles your data. We collect information that you provide directly to us through our contact forms, including your name, email address, and project details. Additionally, we automatically collect technical information through Vercel Speed Insights to monitor and improve the performance of our web infrastructure."
+        },
+        "section2": {
+            "title": "2. How We Use Your Information",
+            "content": "The information we collect is used strictly to communicate with you regarding your inquiries and to maintain the technical integrity of the MarmorSlab platform. We do not use your data for marketing purposes without your explicit consent."
+        },
+        "section3": {
+            "title": "3. Data Retention & Security",
+            "content": "We retain your personal information only as long as necessary to fulfill the purposes for which it was collected or to comply with legal obligations. We implement industry-standard security measures to protect your data from unauthorized access or disclosure."
+        },
+        "section4": {
+            "title": "4. Third-Party Services",
+            "content": "We utilize trusted third-party providers to host our infrastructure and manage communications, including Vercel and Resend. These providers have access to your information only to perform specific tasks on our behalf and are obligated not to disclose or use it for any other purpose."
+        },
+        "section5": {
+            "title": "5. Client Site Data",
+            "content": "For websites engineered for our clients, the Developer does not store or have access to the end-user data collected by those sites unless specifically requested for maintenance or support services."
+        },
+        "section6": {
+            "title": "6. Changes to This Policy",
+            "content": "The Developer reserves the right to update this Privacy Policy at any time. Any changes will be posted on this page with an updated revision date. Your continued use of our services after such changes constitutes your acknowledgment of the modified policy."
+        }
+    },
+    "tos": {
+        "title": "Terms of Service",
+        "lastUpdated": "Last Updated: December 20, 2025",
+        "section1": {
+            "title": "1. Scope of Engineering Services",
+            "content": "MarmorSlab is a professional portfolio brand owned and operated by <strong>Agustin Marmor</strong> (\"the Developer\"). These terms govern the custom web design, front-end engineering, and deployment infrastructure services provided by the Developer. Each project is governed by a separate Statement of Work (SOW)."
+        },
+        "section2": {
+            "title": "2. Client Responsibilities & Assets",
+            "content": "Clients are responsible for providing all necessary brand assets, text copy, and high-resolution imagery. MarmorSlab is not liable for project delays resulting from incomplete or late submission of these materials."
+        },
+        "section3": {
+            "title": "3. Hosting & Third-Party Platforms",
+            "content": "MarmorSlab utilizes industry-leading infrastructure providers (e.g., Vercel, Name.com). While we handle initial configuration, the client is responsible for maintaining their own accounts and associated third-party fees. MarmorSlab is not liable for downtime or data loss caused by these providers."
+        },
+        "section4": {
+            "title": "4. Intellectual Property & Code Ownership",
+            "content": "Full ownership of the custom frontend code and design assets is transferred to the client upon receipt of final payment. MarmorSlab retains the right to display the project in our professional portfolio and use non-proprietary engineering patterns developed during the build."
+        },
+        "section5": {
+            "title": "5. Acceptance & Bug-Fix Window",
+            "content": "Upon deployment to the production environment, the client has 14 calendar days to report any technical bugs or deviations from the original SOW. After this period, the project is considered \"Accepted\" and any further modifications will be billed at our standard hourly engineering rate."
+        },
+        "section6": {
+            "title": "6. Limitation of Liability",
+            "content": "In no event shall the Developer (Agustin Marmor) be liable for any indirect, incidental, or consequential damages (including loss of business profits) arising from the use of the websites engineered under the MarmorSlab brand."
+        },
+        "section7": {
+            "title": "7. Modifications to Terms",
+            "content": "MarmorSlab reserves the right to modify these Terms of Service at any time. Changes will become effective immediately upon being posted to this page. It is the client's responsibility to review these terms periodically to stay informed of updates."
+        }
+    }
+}

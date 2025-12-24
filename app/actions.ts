@@ -12,8 +12,8 @@ export async function sendEmail(formData: { name: string; email: string; message
 
     try {
         const { data, error } = await resend.emails.send({
-            // Ensure this domain is verified in your Resend Dashboard
-            from: 'MarmorSlab Inquiries <info@marmorslab.dev>',
+            
+            from: 'MarmorSlab Inquiries <inquires@marmorslab.dev>',
             to: ['info@marmorslab.dev'],
             subject: `[New Lead] Business Inquiry from ${formData.name}`,
             replyTo: formData.email,

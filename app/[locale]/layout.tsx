@@ -1,9 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
+import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { locales } from '@/i18n';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -43,18 +47,37 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode; }) {
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
+  
+  if (!locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages({ locale });
+
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-
+    <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <body className="antialiased bg-white dark:bg-zinc-950 text-slate-900 dark:text-zinc-100 min-h-screen flex flex-col">
-        <Navbar />
-
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-        <SpeedInsights />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+          <SpeedInsights />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

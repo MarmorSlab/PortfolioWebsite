@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import { Zap, Smartphone, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 const iconVariants: Variants = {
     idle: { rotate: 0, scale: 1 },
@@ -14,21 +15,22 @@ const iconVariants: Variants = {
 };
 
 export default function Benefits() {
+    const t = useTranslations("testimonials");
     const benefits = [
         {
             icon: <Zap className="w-10 h-10 text-amber-500 fill-amber-500/10" />,
-            title: "Lightning Fast",
-            text: "Your website will load in under 2 seconds, keeping visitors engaged and improving your search rankings."
+            title: t("benefit1.title"),
+            text: t("benefit1.text")
         },
         {
             icon: <Smartphone className="w-10 h-10 text-blue-500 fill-blue-500/10" />,
-            title: "Mobile First",
-            text: "Designed and optimized for all devices. Your site will look perfect on phones, tablets, and desktops."
+            title: t("benefit2.title"),
+            text: t("benefit2.text")
         },
         {
             icon: <Target className="w-10 h-10 text-red-500 fill-red-500/10" />,
-            title: "SEO Ready",
-            text: "Built with search engine optimization in mind so customers can easily find your business online."
+            title: t("benefit3.title"),
+            text: t("benefit3.text")
         }
     ];
 
@@ -43,11 +45,10 @@ export default function Benefits() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                        The MarmorSlab Advantage
+                        {t("title")}
                     </h2>
                     <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
-                        We combine computer engineering principles with modern design to build
-                        foundations that never crumble.
+                        {t("subtitle")}
                     </p>
                 </motion.div>
 

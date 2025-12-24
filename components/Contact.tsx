@@ -4,11 +4,13 @@ import { sendEmail } from "@/app/actions";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Send, Loader2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const t = useTranslations("contact");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,9 +20,9 @@ export function Contact() {
         e.preventDefault();
         const target = e.target as HTMLFormElement;
         const botField = target.elements.namedItem("website") as HTMLInputElement;
-
+        
         if (botField?.value) {
-            router.push("/thank-you");
+            router.push("[/thank-you");
             return;
         }
 
@@ -31,10 +33,10 @@ export function Contact() {
             if (result.success) {
                 router.push("/thank-you");
             } else {
-                alert("There was an error sending your message. Please try again later.");
+                alert(t("errorMessage"));
             }
         } catch (error) {
-            alert("An unexpected error occurred.");
+            alert(t("unexpectedError"));
         } finally {
             setIsSubmitting(false);
         }
@@ -44,12 +46,13 @@ export function Contact() {
         <section id="contact" className="py-24 px-6 bg-white dark:bg-zinc-950">
             <div className="max-w-xl mx-auto text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
-                    Start Your Project
+                    {t("title")}
                 </h2>
                 {/* Legal anchor: Links the brand to Agustin Marmor for $0 compliance */}
                 <p className="text-slate-600 dark:text-zinc-400">
-                    Submit your details and <strong>Agustin Marmor</strong> will reach out within 24 hours
-                    to discuss your MarmorSlab foundation.
+                    {t.rich("subtitle", {
+                        strong: (chunks) => <strong>{chunks}</strong>
+                    })}
                 </p>
             </div>
 
@@ -69,11 +72,11 @@ export function Contact() {
 
                     <div className="grid gap-6">
                         <label className="flex flex-col text-left">
-                            <span className="mb-2 text-sm font-semibold text-slate-700 dark:text-zinc-300">Full Name</span>
+                            <span className="mb-2 text-sm font-semibold text-slate-700 dark:text-zinc-300">{t("nameLabel")}</span>
                             <input
                                 type="text"
                                 name="name"
-                                placeholder="Your Name"
+                                placeholder={t("namePlaceholder")}
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
@@ -82,11 +85,11 @@ export function Contact() {
                         </label>
 
                         <label className="flex flex-col text-left">
-                            <span className="mb-2 text-sm font-semibold text-slate-700 dark:text-zinc-300">Business Email</span>
+                            <span className="mb-2 text-sm font-semibold text-slate-700 dark:text-zinc-300">{t("emailLabel")}</span>
                             <input
                                 type="email"
                                 name="email"
-                                placeholder="name@company.com"
+                                placeholder={t("emailPlaceholder")}
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
@@ -95,10 +98,10 @@ export function Contact() {
                         </label>
 
                         <label className="flex flex-col text-left">
-                            <span className="mb-2 text-sm font-semibold text-slate-700 dark:text-zinc-300">Project Details</span>
+                            <span className="mb-2 text-sm font-semibold text-slate-700 dark:text-zinc-300">{t("messageLabel")}</span>
                             <textarea
                                 name="message"
-                                placeholder="Describe your business needs..."
+                                placeholder={t("messagePlaceholder")}
                                 value={formData.message}
                                 onChange={handleChange}
                                 required
@@ -116,11 +119,11 @@ export function Contact() {
                         {isSubmitting ? (
                             <>
                                 <Loader2 className="w-5 h-5 animate-spin" />
-                                Processing...
+                                {t("submitProcessing")}
                             </>
                         ) : (
                             <>
-                                Send Inquiry
+                                {t("submitButton")}
                                 <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </>
                         )}
