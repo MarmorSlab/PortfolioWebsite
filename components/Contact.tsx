@@ -4,14 +4,15 @@ import { sendEmail } from "@/app/actions";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Send, Loader2 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
-export function Contact() {
+
+export default function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const t = useTranslations("contact");
-
+    const locale = useLocale();
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -20,9 +21,10 @@ export function Contact() {
         e.preventDefault();
         const target = e.target as HTMLFormElement;
         const botField = target.elements.namedItem("website") as HTMLInputElement;
-        
+        const thankYouPath = `/${locale}/thank-you`;
+
         if (botField?.value) {
-            router.push("[/thank-you");
+            router.push(thankYouPath);
             return;
         }
 
@@ -31,7 +33,7 @@ export function Contact() {
         try {
             const result = await sendEmail(formData);
             if (result.success) {
-                router.push("/thank-you");
+                router.push(thankYouPath);
             } else {
                 alert(t("errorMessage"));
             }
@@ -133,5 +135,3 @@ export function Contact() {
         </section>
     );
 }
-
-export default Contact;

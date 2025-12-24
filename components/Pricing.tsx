@@ -37,7 +37,7 @@ export default function Pricing() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ amount: 0.3 }}
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900 dark:text-white">{t("title")}</h2>
@@ -52,7 +52,7 @@ export default function Pricing() {
                             key={pkg.name}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ amount: 0.3 }}
                             transition={{ delay: index * 0.1 }}
                             whileHover={{ y: -8 }}
                             className={`relative p-8 rounded-3xl border-2 transition-all duration-300 ${pkg.popular

@@ -29,10 +29,13 @@ export default function Projects() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <ul role="list" className="grid md:grid-cols-2 gap-8">
+
+
                     {projects.map((project) => (
-                        <div
+                        <li
                             key={project.title}
+                            role="listitem"
                             className="bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-slate-200 dark:border-zinc-700"
                         >
                             <div className={`h-48 ${project.image}`}></div>
@@ -55,9 +58,9 @@ export default function Projects() {
                                     {project.tech}
                                 </p>
                             </div>
-                        </div>
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </section>
     );

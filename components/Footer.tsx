@@ -28,14 +28,14 @@ export default function Footer() {
                     <div>
                         <h4 className="font-bold mb-6 text-slate-900 dark:text-white uppercase tracking-widest text-xs">{t("connect")}</h4>
                         <div className="flex flex-col gap-4 text-sm text-slate-600 dark:text-zinc-400">
-                            <a href="https://github.com/agus-marmor/" className="hover:text-blue-600 transition-colors flex items-center gap-2">
-                                <Github size={16} /> {t("social.github")}
+                            <a href="https://github.com/agus-marmor/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors flex items-center gap-2">
+                                <Github size={16} aria-hidden/> {t("social.github")}
                             </a>
-                            <a href="https://www.linkedin.com/in/agustin-marmor/" className="hover:text-blue-600 transition-colors flex items-center gap-2">
-                                <Linkedin size={16} /> {t("social.linkedin")}
+                            <a href="https://www.linkedin.com/in/agustin-marmor/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors flex items-center gap-2">
+                                <Linkedin size={16} aria-hidden/> {t("social.linkedin")}
                             </a>
                             <a href="mailto:info@marmorslab.dev" className="hover:text-blue-600 transition-colors flex items-center gap-2">
-                                <Mail size={16} /> {t("email")}
+                                <Mail size={16} aria-hidden/> {t("email")}
                             </a>
                         </div>
                     </div>

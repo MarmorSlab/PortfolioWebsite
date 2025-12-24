@@ -3,7 +3,6 @@ import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { cn } from "@/lib/utils";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -21,10 +20,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.marmorslab.dev"),
   title: {
-    default: 'MarmorSlab | Web Engineering by Agustin Marmor',
+    default: 'MarmorSlab | High-Performance Websites by Agustin Marmor',
     template: '%s | Agustin Marmor'
   },
-  description: 'Engineering high-performance digital foundations. Designed in the lab, built to be the slab by Agustin Marmor.',
+  description: 'High-performance, modern websites engineered for speed, SEO, and reliability. Custom web development by Agustin Marmor.',
   keywords: ['Web Development', 'Computer Engineering', 'Next.js', 'Custom Websites', 'MarmorSlab'],
   authors: [{ name: 'Agustin Marmor' }],
   creator: 'Agustin Marmor',
@@ -33,17 +32,23 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.marmorslab.dev',
     siteName: 'MarmorSlab',
-    title: 'MarmorSlab | Web Engineering by Agustin Marmor',
-    description: 'Modern web solutions engineered for performance and reliability.',
+    title: 'MarmorSlab | High-Performance Websites by Agustin Marmor',
+    description: 'High-performance, modern websites engineered for speed, SEO, and reliability. Custom web development by Agustin Marmor.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MarmorSlab | Web Engineering',
-    description: 'Engineering high-performance digital foundations.',
+    title: 'MarmorSlab | High-Performance Websites by Agustin Marmor',
+    description: 'High-performance, modern websites engineered for speed, SEO, and reliability. Custom web development by Agustin Marmor.',
   },
   robots: {
     index: true,
     follow: true,
+  },
+  alternates: {
+    canonical: 'https://www.marmorslab.dev',
+    languages: Object.fromEntries(
+      locales.map((locale) => [locale, `https://www.marmorslab.dev/${locale}`])
+    ),
   },
 }
 
@@ -58,9 +63,8 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const resolvedParams = await params;
-  const { locale } = resolvedParams;
-  
+  const { locale } = await params;
+
   if (!locales.includes(locale as any)) {
     notFound();
   }

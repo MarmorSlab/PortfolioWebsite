@@ -15,7 +15,6 @@ export default function LanguageSwitcher() {
         { code: 'en', label: <span className="fi fi-us w-5 h-5"></span> },
         { code: 'es', label: <span className="fi fi-es w-5 h-5"></span> },
     ];
-    console.log('LanguageSwitcher locale:', locale, 'pathname:', pathname);
     const switchLocale = (newLocale: string) => {
         setOpen(false);
         if (newLocale === locale) return;

@@ -35,13 +35,13 @@ export default function Benefits() {
     ];
 
     return (
-        <section id="benefits" className="py-24 px-6 bg-zinc-800 border-y border-zinc-700/50">
+        <section id="benefits" className="py-24 px-6 bg-zinc-900 border-y border-zinc-700/50">
             <div className="max-w-6xl mx-auto">
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ amount: 0.3 }}
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -58,14 +58,14 @@ export default function Benefits() {
                             key={index}
                             initial="idle"
                             whileHover="hovered"
-                            viewport={{ once: true }}
+                            viewport={{ amount: 0.3 }}
                             className={cn(
                                 "group relative p-10 rounded-3xl transition-all duration-300",
                                 "bg-zinc-900 border border-zinc-700/50",
                                 "hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/5"
                             )}
                         >
-                        
+
                             <motion.div
                                 variants={iconVariants}
                                 className="mb-8 inline-flex p-4 rounded-2xl bg-zinc-800 group-hover:bg-zinc-700 transition-colors duration-300"
@@ -81,7 +81,7 @@ export default function Benefits() {
                                 {benefit.text}
                             </p>
 
-                            
+
                             <div className="absolute bottom-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
                                 {benefit.icon}
                             </div>

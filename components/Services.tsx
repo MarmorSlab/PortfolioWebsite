@@ -1,5 +1,6 @@
 import { Palette, Code2, Rocket, Check } from "lucide-react";
 import { useTranslations } from "next-intl";
+import React from "react";
 
 export default function Services() {
     const t = useTranslations("services");
@@ -40,8 +41,8 @@ export default function Services() {
                             key={service.title}
                             className="p-8 bg-slate-50 dark:bg-zinc-800 rounded-2xl border-2 border-slate-200 dark:border-zinc-700 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-xl"
                         >
-                            <div className="w-16 h-16 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                                {service.icon}
+                            <div className="w-16 h-16 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300" role="img" aria-label={service.title}>
+                                {React.cloneElement(service.icon, { "aria-hidden": true })}
                             </div>
                             <h3 className="text-xl font-semibold mb-3 text-slate-900 dark:text-white">{service.title}</h3>
                             <p className="text-slate-700 dark:text-slate-200 mb-4">

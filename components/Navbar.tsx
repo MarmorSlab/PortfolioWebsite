@@ -38,7 +38,7 @@ export default function Navbar() {
 
             let current = null;
             for (const link of navLinks) {
-                const el = document.querySelector(link.href);
+                const el = document.getElementById(link.id);
                 if (!el) continue;
 
                 const rect = (el as HTMLElement).getBoundingClientRect();
@@ -54,7 +54,26 @@ export default function Navbar() {
 
             setActiveSection(current);
         };
+
+        const handleResize = () => {
+            // Recalculate underline position on resize
+            if (activeSection && navRefs.current[activeSection]) {
+                const el = navRefs.current[activeSection];
+                const rect = el.getBoundingClientRect();
+                const parentRect = el.parentElement?.getBoundingClientRect();
+                if (parentRect) {
+                    setUnderlineStyle({
+                        left: rect.left - parentRect.left,
+                        width: rect.width
+                    });
+                } else {
+                    setUnderlineStyle(null);
+                }
+            }
+        };
         window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener("resize", handleResize)
+
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -91,8 +110,8 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
 
-                <Link 
-                    href="#" 
+                <Link
+                    href="#"
                     onClick={(e) => {
                         e.preventDefault();
                         window.scrollTo({ top: 0, behavior: 'smooth' });
