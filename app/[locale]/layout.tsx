@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   keywords: ['Web Development', 'Computer Engineering', 'Next.js', 'Custom Websites', 'MarmorSlab'],
   authors: [{ name: 'Agustin Marmor' }],
   creator: 'Agustin Marmor',
+  icons: {
+    icon: './icon.svg',
+    apple: './icon.svg',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -70,10 +74,27 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages({ locale });
-
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "MarmorSlab",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kissimmee",
+      "addressRegion": "FL"
+    },
+    "image": "https://www.marmorslab.dev/icon.svg",
+    "logo": "https://www.marmorslab.dev/icon.svg",
+    "url": "https://www.marmorslab.dev",
+    "founder": "Agustin Marmor"
+  };
   return (
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <body className="antialiased bg-white dark:bg-zinc-950 text-slate-900 dark:text-zinc-100 min-h-screen flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           <main className="flex-grow">
