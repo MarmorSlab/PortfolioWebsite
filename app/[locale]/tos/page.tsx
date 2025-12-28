@@ -1,3 +1,4 @@
+
 import { useTranslations } from 'next-intl';
 
 export const metadata = { title: 'Terms of Service | Agustin Marmor' }
@@ -48,6 +49,9 @@ export default function TOS() {
                     <p>{t('section7.content')}</p>
                 </div>
             </section>
+            <footer className="mt-12 text-xs text-zinc-600">
+                MarmorSlab is operated by Agustin Marmor
+            </footer>
         </main>
     );
 }

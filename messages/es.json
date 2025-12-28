@@ -14,9 +14,9 @@
         "title": "Sobre Mí",
         "heading": "Precisión Ingenieril",
         "highlight": "al servicio del crecimiento",
-        "paragraph1": "Hola, soy Agustín Marmor, estudiante de Ingeniería en Computación en Kissimmee que ve la web como un sistema técnico, no solo un proyecto de diseño.",
-        "paragraph2": "Bajo mi marca profesional, MarmorSlab, ingeniero cimientos digitales de alto rendimiento para pequeñas empresas. Mi enfoque es simple: un sitio debe ser tan sólido e irrompible como una losa de concreto. Optimizado para velocidad, seguridad y visibilidad en buscadores.",
-        "highlightText": "Conecto la ingeniería compleja con soluciones limpias y efectivas para negocios.",
+        "paragraph1": "Hola, soy Agustin Marmor, estudiante de Ingeniería en Computación en Kissimmee que trata la web como un sistema técnico, no solo un proyecto de diseño.",
+        "paragraph2": "Bajo mi marca profesional, MarmorSlab, ingenierizo cimientos digitales de alto rendimiento para pequeños negocios. Un sitio web debe ser sólido e irrompible como una losa de concreto: optimizado para velocidad, seguridad y visibilidad en buscadores.",
+        "highlightText": "Conecto la ingeniería compleja con soluciones empresariales limpias y efectivas.",
         "cards": {
             "engineering": {
                 "label": "Mentalidad de Ingeniería",
@@ -28,22 +28,22 @@
             },
             "seo": {
                 "label": "SEO Optimizado",
-                "description": "Diseñado para que Google y clientes locales te encuentren."
+                "description": "Construido para que Google y clientes locales te encuentren."
             },
             "education": {
                 "label": "Ingeniería en Computación",
-                "description": "Aplicando lógica de nivel universitario a los desafíos web."
+                "description": "Aplico lógica de nivel universitario a desafíos web."
             }
         }
     },
     "services": {
-        "title": "Lo Que Obtienes",
+        "title": "Lo que obtienes",
         "subtitle": "Todo lo que necesitas para establecer una presencia profesional en línea",
         "service1": {
             "title": "Diseño Personalizado",
             "description": "Diseños claros y modernos enfocados en usabilidad y la identidad de tu marca.",
             "features": [
-                "Diseño móvil primero",
+                "Diseño mobile-first",
                 "Integración de marca",
                 "Enfoque en experiencia de usuario"
             ]
@@ -53,13 +53,13 @@
             "description": "Sitios web rápidos, accesibles y optimizados para SEO construidos con tecnología moderna.",
             "features": [
                 "Carga ultrarrápida",
-                "Optimizado para SEO",
+                "SEO optimizado",
                 "Totalmente responsive"
             ]
         },
         "service3": {
             "title": "Lanzamiento y Soporte",
-            "description": "Despliegue fluido con mantenimiento y actualizaciones continuas incluidas.",
+            "description": "Despliegue sin fricción con mantenimiento y actualizaciones incluidas.",
             "features": [
                 "Configuración de hosting gratis",
                 "Certificado SSL",
@@ -68,25 +68,164 @@
         }
     },
     "projects": {
-        "title": "Proyectos de Ejemplo",
-        "subtitle": "Diseños conceptuales que muestran soluciones web modernas",
-        "project1": {
-            "title": "Sitio Web de Restaurante",
-            "description": "Hermoso concepto de sitio web con reservas en línea y exhibición de menú.",
-            "metrics": [
-                "Diseño responsive",
-                "UI Moderna"
-            ],
-            "tech": "React · TypeScript · Framer Motion"
+        "title": "Ejemplos de Proyectos",
+        "subtitle": "Ejemplos de infraestructuras digitales de alto rendimiento diseñadas para empresas modernas.",
+        "founderNote": "Todos los proyectos son diseñados e implementados personalmente por Agustin Marmor.",
+        "visit": "Visitar Proyecto",
+        "cards": {
+            "restaurant": {
+                "title": "Portal Gastronómico",
+                "description": "Sistema de reservas en tiempo real con integración de menú dinámico para restaurantes de alta gama.",
+                "metrics": [
+                    "99% Rendimiento",
+                    "Optimización SEO"
+                ],
+                "tech": "Next.js · Tailwind · Resend"
+            },
+            "business": {
+                "title": "Slab Profesional",
+                "description": "Un portafolio corporativo minimalista enfocado en la velocidad de carga y la captura de clientes potenciales.",
+                "metrics": [
+                    "Carga < 1s",
+                    "Seguridad SSL"
+                ],
+                "tech": "TypeScript · Framer Motion"
+            },
+            "smallBusiness": {
+                "title": "Impulso Local",
+                "description": "Cimentación digital diseñada específicamente para pequeños negocios.",
+                "metrics": [
+                    "Mobile First",
+                    "WhatsApp Link",
+                    "Google API"
+                ],
+                "tech": "React · Lucide Icons"
+            }
         },
-        "project2": {
-            "title": "Portafolio de Negocios",
-            "description": "Diseño de sitio web limpio y profesional con formularios de contacto y páginas de servicios.",
-            "metrics": [
-                "SEO listo",
-                "Enfocado en rendimiento"
-            ],
-            "tech": "Next.js · Tailwind · Vercel"
+        "Showcase": {
+            "common": {
+                "back": "Volver a MarmorSlab"
+            },
+            "restaurant": {
+                "nav": {
+                    "menu": "Menú de Temporada",
+                    "reserve": "Reservar Mesa",
+                    "about": "Nuestra Ubicación"
+                },
+                "hero": {
+                    "title": "El Tenedor de Oro",
+                    "subtitle": "Gastronomía Exquisita Diseñada para la Perfección"
+                },
+                "menu": {
+                    "items": [
+                        {
+                            "title": "Vieiras Selladas",
+                            "desc": "Vieiras a la plancha, puré de hinojo, glaseado cítrico.",
+                            "price": "$34"
+                        },
+                        {
+                            "title": "Rabo de Buey Estofado",
+                            "desc": "Rabo de buey estofado, jugo de verduras, gremolata de hierbas.",
+                            "price": "$36"
+                        },
+                        {
+                            "title": "Risotto de Setas Silvestres",
+                            "desc": "Arborio cremoso, setas salteadas, aceite de trufa.",
+                            "price": "$30"
+                        },
+                        {
+                            "title": "Pulpo a la Parrilla",
+                            "desc": "Pulpo carbonizado, alioli de pimentón, ensalada tibia de papas.",
+                            "price": "$34"
+                        }
+                    ]
+                },
+                "hours": {
+                    "title": "Horario de Servicio",
+                    "weekdays": "Lun - Sáb: 17:00 - 23:00",
+                    "sunday": "Domingo: Cerrado"
+                },
+                "social": {
+                    "title": "Presencia Social",
+                    "description": "Síguenos para actualizaciones\nde menú estacionales."
+                },
+                "location": {
+                    "address": "123 Culinary Way,\nKissimmee, FL 34741"
+                },
+                "footer": {
+                    "copyright": "Construido por Agustin Marmor",
+                    "brand": "MarmorSlab Engineering",
+                    "closing": "Estructura digital diseñada personalmente por Agustín Marmor"
+                }
+            },
+            "smallBusiness": {
+                "hero": {
+                    "badge": "Firma de Paisajismo Institucional",
+                    "title": "Ingeniería del Paisaje de Florida.",
+                    "description": "Arquitectura de paisajes premium residencial y comercial. Construimos bases exteriores que resisten el clima de Florida Central con precisión.",
+                    "cta": "Solicitar Cotización Técnica"
+                },
+                "services": {
+                    "design": {
+                        "title": "Diseño a Medida",
+                        "desc": "Selección quirúrgica de plantas y modelado de terreno en 3D para asegurar la armonía arquitectónica.",
+                        "features": [
+                            "Modelado 3D",
+                            "Curaduría de Flora"
+                        ]
+                    },
+                    "maintenance": {
+                        "title": "Cuidado de Precisión",
+                        "desc": "Gestión de césped de grado institucional, auditorías de riego y supervisión técnica semanal.",
+                        "features": [
+                            "Auditoría Semanal",
+                            "Eco-Ingeniería"
+                        ]
+                    },
+                    "hardscape": {
+                        "title": "Instalación de Losa",
+                        "desc": "Adoquines de grado industrial y estructuras de contención construidas sobre cimientos inamovibles.",
+                        "features": [
+                            "Mampostería",
+                            "Iluminación LED"
+                        ]
+                    }
+                },
+                "footer": {
+                    "brandName": "Kissimmee Curb Appeal",
+                    "location": "Kissimmee · Hunters Creek · St. Cloud",
+                    "availability": "Disponible Lun - Sáb: 8AM - 6PM",
+                    "cta": "Solicitar Presupuesto",
+                    "attribution": "Cimentación Personalmente Diseñada por {name}"
+                }
+            },
+            "business": {
+                "hero": {
+                    "title": "Estrategia Institucional. Diseñada para Crecer.",
+                    "description": "Nova Strategy Group ofrece consultoría personalizada e infraestructura digital para firmas globales. Proporcionamos los cimientos técnicos para su excelencia corporativa.",
+                    "cta": "Explorar Soluciones"
+                },
+                "services": {
+                    "label": "Capacidades Centrales",
+                    "title": "Nuestra Metodología",
+                    "strategy": {
+                        "name": "Estrategia de Mercado",
+                        "desc": "Marcos de trabajo propios diseñados para navegar paisajes regulatorios complejos y asegurar el dominio competitivo en mercados globales."
+                    },
+                    "analytics": {
+                        "name": "Análisis Predictivo",
+                        "desc": "Transformando datos fragmentados en inteligencia accionable mediante modelos de alto rendimiento y procesamiento en tiempo real."
+                    },
+                    "security": {
+                        "name": "Protección de Activos",
+                        "desc": "Protocolos de seguridad multinivel diseñados para proteger los activos corporativos y mantener la integridad institucional en cada punto de contacto digital."
+                    }
+                },
+                "data": {
+                    "title": "Métricas de Rendimiento Inigualables",
+                    "description": "Nuestro panel integrado proporciona visibilidad de nivel ejecutivo sobre sus operaciones globales, asegurando la toma de decisiones basada en datos en cada etapa."
+                }
+            }
         }
     },
     "testimonials": {
@@ -150,7 +289,8 @@
                 "Soporte prioritario",
                 "Optimización de rendimiento",
                 "Mantenimiento continuo",
-                "Cronograma flexible"
+                "Cronograma flexible",
+                "Posibilidades de E-commerce"
             ]
         }
     },

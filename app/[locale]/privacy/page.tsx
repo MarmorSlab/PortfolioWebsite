@@ -43,6 +43,9 @@ export default function PrivacyPolicy() {
                     <p>{t('section6.content')}</p>
                 </div>
             </section>
+            <footer className="mt-12 text-xs text-zinc-600">
+                MarmorSlab is operated by Agustin Marmor
+            </footer>
         </main>
     );
 }

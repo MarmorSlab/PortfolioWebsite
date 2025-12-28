@@ -68,6 +68,9 @@ export default function ThankYou() {
                 <p className="mt-12 text-xs text-slate-400 dark:text-zinc-600 italic">
                     {t('notice')}
                 </p>
+                <footer className="mt-12 text-xs text-zinc-600">
+                    MarmorSlab is operated by Agustin Marmor
+                </footer>
             </motion.div>
         </main>
     );

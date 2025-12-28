@@ -69,24 +69,163 @@
     },
     "projects": {
         "title": "Example Projects",
-        "subtitle": "Concept designs showcasing modern web solutions",
-        "project1": {
-            "title": "Restaurant Website",
-            "description": "Beautiful website concept with online reservations and menu showcase.",
-            "metrics": [
-                "Responsive design",
-                "Modern UI"
-            ],
-            "tech": "React · TypeScript · Framer Motion"
+        "subtitle": "Examples of high-performance digital infrastructure designed for modern businesses.",
+        "founderNote": "All projects are personally designed and implemented by Agustin Marmor.",
+        "visit": "Visit Project",
+        "cards": {
+            "restaurant": {
+                "title": "Restaurant Website",
+                "description": "Real-time reservation system with dynamic menu integration for high-end restaurants.",
+                "metrics": [
+                    "99+ Performance",
+                    "SEO Optimized"
+                ],
+                "tech": "Next.js · Tailwind · Resend"
+            },
+            "business": {
+                "title": "Business Portfolio",
+                "description": "A minimalist corporate portfolio focused on load speed and lead generation.",
+                "metrics": [
+                    "< 1s Load",
+                    "SSL Secure"
+                ],
+                "tech": "TypeScript · Framer Motion"
+            },
+            "smallBusiness": {
+                "title": "Local Service Engine",
+                "description": "Digital foundation built specifically for local small businesses.",
+                "metrics": [
+                    "Mobile First",
+                    "WhatsApp Ready",
+                    "Google API"
+                ],
+                "tech": "React · Lucide Icons"
+            }
         },
-        "project2": {
-            "title": "Business Portfolio",
-            "description": "Clean, professional website design with contact forms and service pages.",
-            "metrics": [
-                "SEO ready",
-                "Performance focused"
-            ],
-            "tech": "Next.js · Tailwind · Vercel"
+        "Showcase": {
+            "common": {
+                "back": "Back to MarmorSlab"
+            },
+            "restaurant": {
+                "nav": {
+                    "menu": "Seasonal Menu",
+                    "reserve": "Book a Table",
+                    "about": "Our Location"
+                },
+                "hero": {
+                    "title": "The Gilded Fork",
+                    "subtitle": "Exquisite Dining Engineered for Perfection"
+                },
+                "menu": {
+                    "items": [
+                        {
+                            "title": "Seared Scallops",
+                            "desc": "Pan-seared scallops, fennel puree, citrus glaze.",
+                            "price": "$34"
+                        },
+                        {
+                            "title": "Braised Short Rib",
+                            "desc": "Slow-braised short rib, root vegetable jus, herb gremolata.",
+                            "price": "$36"
+                        },
+                        {
+                            "title": "Wild Mushroom Risotto",
+                            "desc": "Creamy arborio, sautéed wild mushrooms, truffle oil.",
+                            "price": "$30"
+                        },
+                        {
+                            "title": "Grilled Octopus",
+                            "desc": "Charred octopus, smoked paprika aioli, warm potato salad.",
+                            "price": "$34"
+                        }
+                    ]
+                },
+                "hours": {
+                    "title": "Service Hours",
+                    "weekdays": "Mon - Sat: 5pm - 11pm",
+                    "sunday": "Sunday: Closed"
+                },
+                "social": {
+                    "title": "Social Presence",
+                    "description": "Follow us for seasonal\nmenu updates."
+                },
+                "location": {
+                    "address": "123 Culinary Way,\nKissimmee, FL 34741"
+                },
+                "footer": {
+                    "copyright": "Built by Agustin Marmor",
+                    "brand": "MarmorSlab Engineering",
+                    "closing": "Digital Structure Personally Engineered by Agustin Marmor"
+                }
+            },
+            "smallBusiness": {
+                "hero": {
+                    "badge": "Institutional Landscaping Firm",
+                    "title": "Engineering the Florida Landscape.",
+                    "description": "Premium residential and commercial landscape architecture. We build outdoor foundations that endure the Central Florida climate with precision.",
+                    "cta": "Request Technical Quote"
+                },
+                "services": {
+                    "design": {
+                        "title": "Bespoke Design",
+                        "desc": "Surgical plant selection and 3D terrain modeling to ensure architectural harmony with your property.",
+                        "features": [
+                            "3D Modeling",
+                            "Flora Curation"
+                        ]
+                    },
+                    "maintenance": {
+                        "title": "Precision Care",
+                        "desc": "Institutional-grade lawn management, irrigation audits, and weekly technical oversight.",
+                        "features": [
+                            "Weekly Audit",
+                            "Eco-Engineered"
+                        ]
+                    },
+                    "hardscape": {
+                        "title": "Slab Installation",
+                        "desc": "Industrial-grade pavers and retaining structures built on immovable digital and physical foundations.",
+                        "features": [
+                            "Stone Masonry",
+                            "LED Lighting"
+                        ]
+                    }
+                },
+                "footer": {
+                    "brandName": "Kissimmee Curb Appeal",
+                    "location": "Kissimmee · Hunters Creek · St. Cloud",
+                    "availability": "Available Mon - Sat: 8AM - 6PM",
+                    "cta": "Request Quote",
+                    "attribution": "Foundation Personally Engineered by {name}"
+                }
+            },
+            "business": {
+                "hero": {
+                    "title": "Institutional Strategy. Engineered for Growth.",
+                    "description": "Nova Strategy Group delivers bespoke consulting and digital infrastructure for global firms. We provide the technical foundations for your corporate excellence.",
+                    "cta": "Explore Our Solutions"
+                },
+                "services": {
+                    "label": "Core Capabilities",
+                    "title": "Our Methodology",
+                    "strategy": {
+                        "name": "Market Strategy",
+                        "desc": "Proprietary frameworks designed to navigate complex regulatory landscapes and secure competitive dominance in global markets."
+                    },
+                    "analytics": {
+                        "name": "Predictive Analytics",
+                        "desc": "Transforming fragmented data into actionable intelligence through high-performance modeling and real-time processing."
+                    },
+                    "security": {
+                        "name": "Asset Protection",
+                        "desc": "Multi-layered security protocols engineered to shield corporate assets and maintain institutional integrity across all digital touchpoints."
+                    }
+                },
+                "data": {
+                    "title": "Unrivaled Performance Metrics",
+                    "description": "Our integrated dashboard provides executive-level visibility into your global operations, ensuring data-backed decision-making at every stage."
+                }
+            }
         }
     },
     "testimonials": {
@@ -150,7 +289,8 @@
                 "Priority support",
                 "Performance optimization",
                 "Ongoing maintenance",
-                "Flexible timeline"
+                "Flexible timeline",
+                "E-commerce capabilities"
             ]
         }
     },

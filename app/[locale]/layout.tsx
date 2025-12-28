@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const baseUrl = "https://www.marmorslab.dev";
 
-  
+
   const pathname = locale === 'en' ? '' : `/${locale}`;
 
   return {
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     authors: [{ name: 'Agustin Marmor' }],
     creator: 'Agustin Marmor',
     icons: {
-      icon: '/icon.svg', 
+      icon: '/icon.svg',
       apple: '/icon.svg',
     },
     alternates: {
@@ -108,11 +108,9 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
           <main className="flex-grow">
             {children}
           </main>
-          <Footer />
           <SpeedInsights />
         </NextIntlClientProvider>
       </body>

@@ -10,10 +10,12 @@ import About from "@/components/About";
 import Benefits from "@/components/Benefits";
 import Footer from "@/components/Footer";
 import Process from "@/components/Process";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <>
+      <Navbar />
       <main>
         <Hero />
         <FadeInSection direction="up">
@@ -44,6 +46,7 @@ export default function Home() {
           <Contact />
         </FadeInSection>
       </main>
+      <Footer />
     </>
   );
 }

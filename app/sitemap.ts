@@ -2,7 +2,19 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.marmorslab.dev';
-
+    const projectSlugs = ['restaurant', 'business', 'smallBusiness'];
+    const projectUrls = projectSlugs.flatMap(slug => [
+        {
+            url: `${baseUrl}/projects/${slug}`,
+            lastModified: new Date(),
+            alternates: { languages: { en: `${baseUrl}/projects/${slug}`, es: `${baseUrl}/es/projects/${slug}` } }
+        },
+        {
+            url: `${baseUrl}/es/projects/${slug}`,
+            lastModified: new Date(),
+            alternates: { languages: { en: `${baseUrl}/projects/${slug}`, es: `${baseUrl}/es/projects/${slug}` } }
+        }
+    ]);
     return [
         {
             url: baseUrl,
@@ -29,5 +41,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 },
             },
         },
+        ...projectUrls
     ];
 }
