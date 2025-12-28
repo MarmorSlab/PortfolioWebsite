@@ -1,4 +1,6 @@
+"use client";
 import { useTranslations } from "next-intl";
+
 import { Link } from "@/navigation";
 import Image from "next/image"; // Import the Image component
 import {
