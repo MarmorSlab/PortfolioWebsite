@@ -50,7 +50,7 @@ export default function Hero() {
                     id="hero-heading"
                 >
                     {t("title")}
-                    <span className="block bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+                    <span className="block bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent align-baseline pb-1" style={{ lineHeight: '1.1', paddingBottom: '0.15em', display: 'inline-block' }}>
                         {t("titleGradient")}
                     </span>
                 </motion.h1>

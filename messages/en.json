@@ -70,7 +70,7 @@
     "projects": {
         "title": "Example Projects",
         "subtitle": "Examples of high-performance digital infrastructure designed for modern businesses.",
-        "founderNote": "All projects are personally designed and implemented by Agustin Marmor.",
+        "founderNote": "All projects are personally designed and implemented by Agustin Marmor. The examples are simple demo sites and do not represent live client projects.",
         "visit": "Visit Project",
         "cards": {
             "restaurant": {
