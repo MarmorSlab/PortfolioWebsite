@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 
@@ -20,55 +20,61 @@ export const viewport: Viewport = {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const baseUrl = "https://www.marmorslab.dev";
-
-
   const pathname = locale === 'en' ? '' : `/${locale}`;
-
+  const t = await getTranslations({ locale, namespace: 'metadata' });
   return {
     metadataBase: new URL(baseUrl),
     title: {
-      default: 'MarmorSlab | High-Performance Websites by Agustin Marmor',
-      template: '%s | Agustin Marmor'
+      default: t('title'),
+      template: `%s | ${t('founderName')}`
     },
-    description: 'High-performance, modern websites engineered for speed, SEO, and reliability. Custom web development by Agustin Marmor.',
-    keywords: ['Web Development', 'Computer Engineering', 'Next.js', 'Custom Websites', 'MarmorSlab'],
-    authors: [{ name: 'Agustin Marmor' }],
-    manifest: '/site.webmanifest',
-    creator: 'Agustin Marmor',
-    icons: {
-      icon: [
-        { url: '/favicon.ico', sizes: 'any' }, 
-        { url: '/favicon.svg', type: 'image/svg+xml' }, 
-        { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' }, 
-      ],
-      apple: [
-        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }, 
-      ],
-    },
+    description: t('description'),
+    keywords: t('keywords').split(','),
+    authors: [{ name: t('founderName') }],
+    creator: t('founderName'),
     alternates: {
       canonical: `${baseUrl}${pathname}`,
       languages: {
-        'en-US': baseUrl,
+        'en-US': `${baseUrl}/en`,
         'es-US': `${baseUrl}/es`,
-        'x-default': baseUrl,
+        'x-default': `${baseUrl}/en`,
       },
     },
+
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/favicon.svg', type: 'image/svg+xml' },
+        { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      ],
+      apple: [
+        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
+    },
+
+
     openGraph: {
-      type: 'website',
+      title: t('title'),
+      description: t('description'),
       locale: locale === 'es' ? 'es_US' : 'en_US',
       url: `${baseUrl}${pathname}`,
       siteName: 'MarmorSlab',
-      title: 'MarmorSlab | High-Performance Websites by Agustin Marmor',
-      description: 'High-performance, modern websites engineered for speed, SEO, and reliability. Custom web development by Agustin Marmor.',
+      type: 'website',
+
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'MarmorSlab | High-Performance Websites by Agustin Marmor',
-      description: 'High-performance, modern websites engineered for speed, SEO, and reliability. Custom web development by Agustin Marmor.',
+      title: t('title'),
+      description: t('description'),
     },
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+      },
     },
   };
 }

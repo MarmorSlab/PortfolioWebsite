@@ -1,4 +1,11 @@
 {
+    "metadata": {
+        "title": "MarmorSlab | Sitios Web de Alto Rendimiento por Agustin Marmor",
+        "description": "Desarrollo web personalizado diseñado para velocidad y confiabilidad en Kissimmee, FL. Creado por Agustín Marmor.",
+        "founderName": "Agustín Marmor",
+        "keywords": "Desarrollo Web, Ingeniería en Computación, Next.js, Sitios Personalizados, MarmorSlab",
+        "imageSubtitle": "Ingeniería Web Profesional"
+    },
     "hero": {
         "badge": "Estudiante de Ingeniería en Computación · Soluciones Web Modernas",
         "title": "Sitios web profesionales que",
