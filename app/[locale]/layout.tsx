@@ -33,10 +33,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: 'High-performance, modern websites engineered for speed, SEO, and reliability. Custom web development by Agustin Marmor.',
     keywords: ['Web Development', 'Computer Engineering', 'Next.js', 'Custom Websites', 'MarmorSlab'],
     authors: [{ name: 'Agustin Marmor' }],
+    manifest: '/site.webmanifest',
     creator: 'Agustin Marmor',
     icons: {
-      icon: '/icon.svg',
-      apple: '/icon.svg',
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' }, 
+        { url: '/favicon.svg', type: 'image/svg+xml' }, 
+        { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' }, 
+      ],
+      apple: [
+        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }, 
+      ],
     },
     alternates: {
       canonical: `${baseUrl}${pathname}`,
