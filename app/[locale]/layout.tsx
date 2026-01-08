@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const baseUrl = "https://www.marmorslab.dev";
-  const pathname = locale === 'en' ? '' : `/${locale}`;
+  const pathname = `/${locale}`;
   const t = await getTranslations({ locale, namespace: 'metadata' });
   return {
     metadataBase: new URL(baseUrl),
@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     alternates: {
       canonical: `${baseUrl}${pathname}`,
       languages: {
-        'en-US': `${baseUrl}/en`,
-        'es-US': `${baseUrl}/es`,
+        en: `${baseUrl}/en`,
+        es: `${baseUrl}/es`,
         'x-default': `${baseUrl}/en`,
       },
     },

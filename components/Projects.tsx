@@ -14,7 +14,13 @@ export default function Projects() {
         description: t(`cards.${key}.description`),
         metrics: t.raw(`cards.${key}.metrics`) as string[],
         tech: t(`cards.${key}.tech`),
-        href: `/projects/${key === "smallBusiness" ? "small-business" : key}`,
+        href: {
+            pathname: "/projects/[slug]",
+            params: {
+                slug: key === "smallBusiness" ? "small-business" : key
+            }
+        },
+
         image: index === 0 ? "bg-gradient-to-br from-blue-500 to-cyan-500" :
             index === 1 ? "bg-gradient-to-br from-green-500 to-emerald-500" :
                 "bg-gradient-to-br from-purple-500 to-indigo-500"

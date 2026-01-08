@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.marmorslab.dev';
-    const projectSlugs = ['restaurant', 'business', 'smallBusiness'];
+    const projectSlugs = ['restaurant', 'business', 'small-business'];
     const projectUrls = projectSlugs.flatMap(slug => [
         {
             url: `${baseUrl}/en/projects/${slug}`,
