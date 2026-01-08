@@ -256,15 +256,15 @@
         "subtitle": "Elige el paquete que se ajuste a tus necesidades",
         "popular": "Más Popular",
         "cta": "Comenzar",
-        "footer": "Todos los paquetes incluyen consulta gratuita y definición del proyecto. Cotizaciones personalizadas disponibles para requisitos únicos.",
+        "footer": "Sin plantillas. Sin bloqueos. Sin tarifas ocultas.\nCada proyecto comienza con una consulta gratuita y un alcance claro antes de que comience el desarrollo.",
         "customPlanLink": "¿Necesitas algo diferente? Construyamos un plan personalizado.",
         "starter": {
             "name": "Inicial",
-            "price": "$499",
-            "description": "Perfecto para pequeñas empresas que recién comienzan",
+            "price": "$799",
+            "description": "Un sitio web profesional y de alto rendimiento que establece confianza y convierte visitantes desde el primer día.\nIdeal para pequeños negocios que desean una presencia web rápida y moderna sin sacrificar calidad.",
             "features": [
                 "Hasta 5 páginas",
-                "Responsive móvil",
+                "Optimización para móvil",
                 "Formulario de contacto",
                 "Configuración SEO básica",
                 "2 rondas de revisiones",
@@ -273,8 +273,8 @@
         },
         "professional": {
             "name": "Profesional",
-            "price": "$999",
-            "description": "Ideal para negocios en crecimiento",
+            "price": "$1,499",
+            "description": "Un sitio web escalable y enfocado en conversiones, construido para el crecimiento, la visibilidad y el rendimiento a largo plazo.\nDiseñado para negocios que desean SEO, analíticas y flexibilidad integradas desde el principio.",
             "features": [
                 "Hasta 10 páginas",
                 "Animaciones avanzadas",
@@ -289,7 +289,7 @@
         "enterprise": {
             "name": "Empresarial",
             "price": "Personalizado",
-            "description": "Para proyectos complejos y grandes empresas",
+            "description": "Soluciones totalmente personalizadas diseñadas para requisitos complejos, rendimiento a gran escala y necesidades comerciales únicas.\nIdeal para equipos que necesitan funcionalidades personalizadas, integraciones o desarrollo continuo.",
             "features": [
                 "Páginas ilimitadas",
                 "Funciones personalizadas",

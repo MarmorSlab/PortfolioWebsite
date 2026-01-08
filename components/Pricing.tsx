@@ -74,7 +74,7 @@ export default function Pricing() {
                                 <h3 className="text-2xl font-bold mb-2 text-slate-900 dark:text-white">{pkg.name}</h3>
                                 <div className="flex items-baseline gap-1 mb-2">
                                     <span className="text-4xl font-bold text-slate-900 dark:text-white">{pkg.price}</span>
-                                    {pkg.price.toLowerCase() !== "custom" && <span className="text-slate-500 dark:text-zinc-500 text-sm">/project</span>}
+                                    {pkg.price.toLowerCase() !== "custom" && <span className="text-slate-500 dark:text-zinc-500 text-sm"></span>}
                                 </div>
                                 <p className="text-sm text-slate-600 dark:text-zinc-400">
                                     {pkg.description}

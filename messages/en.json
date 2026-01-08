@@ -256,12 +256,12 @@
         "subtitle": "Choose the package that fits your needs",
         "popular": "Most Popular",
         "cta": "Get Started",
-        "footer": "All packages include free consultation and project scoping. Custom quotes available for unique requirements.",
+        "footer": "No templates. No lock-ins. No hidden fees.\nEvery project starts with a free consultation and clear scope before development begins.",
         "customPlanLink": "Need something different? Let's build a custom plan.",
         "starter": {
             "name": "Starter",
-            "price": "$499",
-            "description": "Perfect for small businesses just getting started",
+            "price": "$799",
+            "description": "A professional, high-performance website that establishes trust and converts visitors from day one.\nIdeal for small businesses that want a fast, modern web presence without cutting corners.",
             "features": [
                 "Up to 5 pages",
                 "Mobile responsive",
@@ -273,8 +273,8 @@
         },
         "professional": {
             "name": "Professional",
-            "price": "$999",
-            "description": "Ideal for growing businesses",
+            "price": "$1,499",
+            "description": "A scalable, conversion-focused website built for growth, visibility, and long-term performance.\nDesigned for businesses that want SEO, analytics, and flexibility baked in from the start.",
             "features": [
                 "Up to 10 pages",
                 "Advanced animations",
@@ -289,7 +289,7 @@
         "enterprise": {
             "name": "Enterprise",
             "price": "Custom",
-            "description": "For complex projects and large businesses",
+            "description": "Fully custom solutions engineered for complex requirements, performance at scale, and unique business needs.\nBest for teams that need custom functionality, integrations, or ongoing development.",
             "features": [
                 "Unlimited pages",
                 "Custom features",

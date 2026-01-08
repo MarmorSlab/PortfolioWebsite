@@ -5,26 +5,23 @@ import { i } from "framer-motion/client";
 export default function Projects() {
     const t = useTranslations("projects");
 
-    // Mapping keys to keep the code clean and maintainable
+    
     const projectKeys = ["restaurant", "business", "smallBusiness"] as const;
-
-    const projects = projectKeys.map((key, index) => ({
+    
+    const projects = projectKeys.map((key, index) => {
+        const slug = key === "smallBusiness" ? "small-business" : key;
+        return {
         id: key,
         title: t(`cards.${key}.title`),
         description: t(`cards.${key}.description`),
         metrics: t.raw(`cards.${key}.metrics`) as string[],
         tech: t(`cards.${key}.tech`),
-        href: {
-            pathname: "/projects/[slug]",
-            params: {
-                slug: key === "smallBusiness" ? "small-business" : key
-            }
-        },
-
+        href: `/projects/${slug}`,
         image: index === 0 ? "bg-gradient-to-br from-blue-500 to-cyan-500" :
             index === 1 ? "bg-gradient-to-br from-green-500 to-emerald-500" :
                 "bg-gradient-to-br from-purple-500 to-indigo-500"
-    }));
+        }
+    });
 
     return (
         <section id="projects" className="py-24 px-6 bg-slate-50 dark:bg-zinc-800">
@@ -46,7 +43,6 @@ export default function Projects() {
                                 className="block h-full bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-slate-200 dark:border-zinc-700 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
                             >
                                 <div className={`h-48 relative overflow-hidden ${project.image}`}>
-                                    {/* Overlay that appears on hover */}
                                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                         <span className="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2">
                                             {t("visit")} <ExternalLink size={14} />
