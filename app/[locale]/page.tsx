@@ -11,6 +11,7 @@ import Benefits from "@/components/Benefits";
 import Footer from "@/components/Footer";
 import Process from "@/components/Process";
 import Navbar from "@/components/Navbar";
+import CarePlans from "@/components/CarePlans";
 
 export default function Home() {
   return (
@@ -40,6 +41,10 @@ export default function Home() {
 
         <FadeInSection direction="right">
           <Pricing />
+        </FadeInSection>
+
+        <FadeInSection direction="up">
+          <CarePlans />
         </FadeInSection>
 
         <FadeInSection direction="up">

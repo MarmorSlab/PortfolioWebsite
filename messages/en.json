@@ -261,43 +261,92 @@
         "starter": {
             "name": "Starter",
             "price": "$799",
-            "description": "A professional, high-performance website that establishes trust and converts visitors from day one.\nIdeal for small businesses that want a fast, modern web presence without cutting corners.",
+            "description": "A professional, high-performance website designed to establish credibility and convert visitors.\nIdeal for small businesses that need a strong online presence without unnecessary complexity.",
             "features": [
                 "Up to 5 pages",
-                "Mobile responsive",
+                "Mobile responsive design",
+                "Custom modern layout",
                 "Contact form",
-                "Basic SEO setup",
+                "Basic on-page SEO",
                 "2 rounds of revisions",
-                "2-week delivery"
+                "2-3 week delivery"
             ]
         },
         "professional": {
             "name": "Professional",
             "price": "$1,499",
-            "description": "A scalable, conversion-focused website built for growth, visibility, and long-term performance.\nDesigned for businesses that want SEO, analytics, and flexibility baked in from the start.",
+            "description": "A scalable, conversion-focused website engineered for visibility, performance, and growth.\nBest for businesses that want SEO, analytics, and long-term flexibility built in from day one.",
             "features": [
                 "Up to 10 pages",
-                "Advanced animations",
+                "Advanced animations & interactions",
                 "CMS integration",
-                "Advanced SEO",
-                "Analytics setup",
-                "Unlimited revisions",
-                "3-week delivery",
-                "1 month support"
+                "Advanced SEO setup",
+                "Google Analytics & Search Console",
+                "Performance optimization",
+                "Unlimited revisions during development",
+                "3-4 week delivery",
+                "1 month post-launch support"
             ]
         },
         "enterprise": {
             "name": "Enterprise",
             "price": "Custom",
-            "description": "Fully custom solutions engineered for complex requirements, performance at scale, and unique business needs.\nBest for teams that need custom functionality, integrations, or ongoing development.",
+            "description": "Custom-engineered web platforms built for complex requirements, integrations, and performance at scale.\nDesigned for teams that need flexibility, security, and ongoing development.",
             "features": [
                 "Unlimited pages",
-                "Custom features",
-                "Priority support",
-                "Performance optimization",
-                "Ongoing maintenance",
+                "Custom features & integrations",
+                "E-commerce or booking systems",
+                "Advanced performance tuning",
+                "Security hardening",
+                "Priority communication",
                 "Flexible timeline",
-                "E-commerce capabilities"
+                "Ongoing development available"
+            ]
+        }
+    },
+    "care": {
+        "title": "Optional Website Care Plans",
+        "subtitle": "After your website is live, I can take care of updates, security, and performance so you don't have to.",
+        "popular": "Most Popular",
+        "cta": "Add Care Plan",
+        "perMonth": "month",
+        "footer": "Care plans are optional and can be canceled at any time.\nPlans do not include new features or redesigns.",
+        "basic": {
+            "name": "Basic Care",
+            "price": "$49",
+            "description": "Peace of mind for small websites",
+            "features": [
+                "Security monitoring & updates",
+                "Monthly backups",
+                "Uptime monitoring",
+                "Minor content updates (text & images)",
+                "Email support (48-hour response)"
+            ]
+        },
+        "pro": {
+            "name": "Pro Care",
+            "price": "$99",
+            "description": "Best for growing businesses",
+            "features": [
+                "Everything in Basic",
+                "Performance & speed optimizations",
+                "SEO health checks",
+                "Monthly analytics report",
+                "Priority support (24-hour response)",
+                "Small layout adjustments"
+            ]
+        },
+        "advanced": {
+            "name": "Advanced Care",
+            "price": "$199",
+            "description": "For mission-critical websites",
+            "features": [
+                "Everything in Pro",
+                "Weekly backups",
+                "Advanced security hardening",
+                "Conversion and UX review",
+                "Monthly performance report",
+                "Same-day support"
             ]
         }
     },

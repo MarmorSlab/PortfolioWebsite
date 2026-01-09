@@ -252,52 +252,101 @@
         }
     },
     "pricing": {
-        "title": "Precios Simples y Transparentes",
-        "subtitle": "Elige el paquete que se ajuste a tus necesidades",
+        "title": "Precios claros y sin sorpresass",
+        "subtitle": "Elige el plan que mejor se adapte a tu negocio",
         "popular": "Más Popular",
         "cta": "Comenzar",
-        "footer": "Sin plantillas. Sin bloqueos. Sin tarifas ocultas.\nCada proyecto comienza con una consulta gratuita y un alcance claro antes de que comience el desarrollo.",
-        "customPlanLink": "¿Necesitas algo diferente? Construyamos un plan personalizado.",
+        "footer": "Sin plantillas. Sin contratos forzados. Sin costos ocultos.\nCada proyecto comienza con una consulta gratuita y un alcance claro antes del desarrollo.",
+        "customPlanLink": "¿Necesitas algo diferente? Construyamos un plan a tu medida.",
         "starter": {
             "name": "Inicial",
             "price": "$799",
-            "description": "Un sitio web profesional y de alto rendimiento que establece confianza y convierte visitantes desde el primer día.\nIdeal para pequeños negocios que desean una presencia web rápida y moderna sin sacrificar calidad.",
+            "description": "Un sitio web profesional y de alto rendimiento diseñado para generar confianza y convertir visitantes.\nIdeal para pequeños negocios que necesitan presencia online sin complejidad innecesaria.",
             "features": [
                 "Hasta 5 páginas",
-                "Optimización para móvil",
+                "Diseño adaptable a móviles",
+                "Diseño moderno personalizado",
                 "Formulario de contacto",
-                "Configuración SEO básica",
+                "SEO básico en página",
                 "2 rondas de revisiones",
-                "Entrega en 2 semanas"
+                "Entrega en 2-3 semanas"
             ]
         },
         "professional": {
             "name": "Profesional",
             "price": "$1,499",
-            "description": "Un sitio web escalable y enfocado en conversiones, construido para el crecimiento, la visibilidad y el rendimiento a largo plazo.\nDiseñado para negocios que desean SEO, analíticas y flexibilidad integradas desde el principio.",
+            "description": "Un sitio web escalable y orientado a conversiones, diseñado para visibilidad, rendimiento y crecimiento.\nPerfecto para negocios que buscan SEO, analítica y flexibilidad desde el inicio.",
             "features": [
                 "Hasta 10 páginas",
-                "Animaciones avanzadas",
-                "Integración de CMS",
+                "Animaciones e interacciones avanzadas",
+                "Integración con CMS",
                 "SEO avanzado",
-                "Configuración de analytics",
-                "Revisiones ilimitadas",
-                "Entrega en 3 semanas",
-                "Soporte de 1 mes"
+                "Google Analytics y Search Console",
+                "Optimización de rendimiento",
+                "Revisiones ilimitadas durante el desarrollo",
+                "Entrega en 3-4 semanas",
+                "1 mes de soporte post-lanzamiento"
             ]
         },
         "enterprise": {
             "name": "Empresarial",
             "price": "Personalizado",
-            "description": "Soluciones totalmente personalizadas diseñadas para requisitos complejos, rendimiento a gran escala y necesidades comerciales únicas.\nIdeal para equipos que necesitan funcionalidades personalizadas, integraciones o desarrollo continuo.",
+            "description": "Soluciones web totalmente personalizadas, diseñadas para requerimientos complejos y alto rendimiento.\nIdeal para empresas que necesitan integraciones, seguridad y desarrollo continuo.",
             "features": [
                 "Páginas ilimitadas",
-                "Funciones personalizadas",
-                "Soporte prioritario",
-                "Optimización de rendimiento",
-                "Mantenimiento continuo",
+                "Funcionalidades e integraciones personalizadas",
+                "E-commerce o sistemas de reservas",
+                "Optimización avanzada de rendimiento",
+                "Refuerzo de seguridad",
+                "Comunicación prioritaria",
                 "Cronograma flexible",
-                "Posibilidades de E-commerce"
+                "Desarrollo continuo disponible"
+            ]
+        }
+    },
+    "care": {
+        "title": "Planes de Cuidado Opcionales",
+        "subtitle": "Después del lanzamiento, puedo encargarme del mantenimiento, seguridad y actualizaciones de tu sitio web.",
+        "popular": "Más Popular",
+        "cta": "Agregar Plan",
+        "perMonth": "mes",
+        "footer": "Los planes de cuidado son opcionales y se pueden cancelar en cualquier momento.\nLos planes no incluyen nuevas funciones o rediseños.",
+        "basic": {
+            "name": "Cuidado Básico",
+            "price": "$49",
+            "description": "Tranquilidad para sitios web pequeños",
+            "features": [
+                "Monitoreo de seguridad y actualizaciones",
+                "Copias de seguridad mensuales",
+                "Monitoreo de disponibilidad",
+                "Cambios menores de contenido (texto e imágenes)",
+                "Soporte por correo (48h)"
+            ]
+        },
+        "pro": {
+            "name": "Cuidado Pro",
+            "price": "$99",
+            "description": "Ideal para negocios en crecimiento",
+            "features": [
+                "Todo lo incluido en Básico",
+                "Optimización de rendimiento y velocidad",
+                "Revisión de salud SEO",
+                "Reporte mensual de analíticas",
+                "Soporte prioritario (24h)",
+                "Ajustes pequeños de diseño"
+            ]
+        },
+        "advanced": {
+            "name": "Cuidado Avanzado",
+            "price": "$199",
+            "description": "Para sitios web críticos para el negocio",
+            "features": [
+                "Todo lo incluido en Pro",
+                "Copias de seguridad semanales",
+                "Seguridad avanzada",
+                "Revisión de conversión y experiencia de usuario",
+                "Reporte mensual de rendimiento",
+                "Soporte el mismo día"
             ]
         }
     },
