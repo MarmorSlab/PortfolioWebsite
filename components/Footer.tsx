@@ -1,7 +1,7 @@
 "use client";
 import { Logo } from "./Logo";
 import { Github, Linkedin, Mail } from "lucide-react";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import { useTranslations, useLocale } from "next-intl";
 
 export default function Footer() {

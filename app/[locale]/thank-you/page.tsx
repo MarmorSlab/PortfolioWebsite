@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import { CheckCircle2, ArrowLeft, Calendar, Mail } from "lucide-react";
 import { useTranslations } from 'next-intl';
 

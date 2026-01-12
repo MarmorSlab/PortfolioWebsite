@@ -1,7 +1,4 @@
-"use client";
-import { useTranslations } from "next-intl";
-
-import { Link } from "@/navigation";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image"; // Import the Image component
 import {
     ChevronLeft,
@@ -13,21 +10,26 @@ import {
 } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-export default function BusinessDemo() {
-    const t = useTranslations("projects.Showcase.business");
-    const common = useTranslations("projects.Showcase.common");
+export default async function BusinessDemo({
+    params
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: "projects.Showcase.business" });
+    const common = await getTranslations({ locale, namespace: "projects.Showcase.common" });
 
     return (
         // Use slate-900 for a richer, professional dark tone
         <div className="min-h-screen bg-slate-900 text-slate-200 selection:bg-blue-500/30 font-sans antialiased">
             {/* 1. PORTFOLIO ESCAPE HATCH */}
             <nav className="fixed top-0 w-full z-50 flex items-center justify-between px-8 py-6 bg-slate-900/60 backdrop-blur-md border-b border-white/5">
-                <Link
-                    href="/#projects"
-                    className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-allgroup"
+                <a
+                    href={`/${locale}#projects`}
+                    className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-all group cursor-pointer"
                 >
                     <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> {common('back')}
-                </Link>
+                </a>
                 <div className="flex items-center gap-8">
                     <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
                         <span className="hover:text-white cursor-pointer transition-colors">Solutions</span>

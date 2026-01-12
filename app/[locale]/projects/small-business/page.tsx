@@ -1,6 +1,4 @@
-"use client";
-import { useTranslations } from "next-intl";
-import { Link } from "@/navigation";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import {
     ChevronLeft,
@@ -14,9 +12,14 @@ import {
 } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-export default function SmallBusinessDemo() {
-    const t = useTranslations("projects.Showcase.smallBusiness");
-    const common = useTranslations("projects.Showcase.common");
+export default async function SmallBusinessDemo({
+    params
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: "projects.Showcase.smallBusiness" });
+    const common = await getTranslations({ locale, namespace: "projects.Showcase.common" });
 
     return (
         <div className="min-h-screen bg-[#0f110f] text-stone-300 selection:bg-emerald-500/30 font-sans antialiased">
@@ -32,9 +35,9 @@ export default function SmallBusinessDemo() {
 
             {/* 2. NAVIGATION BAR */}
             <nav className="fixed top-0 w-full z-40 bg-[#0f110f]/60 backdrop-blur-xl border-b border-white/5 px-6 py-4 flex items-center justify-between">
-                <Link href="/#projects" className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-stone-500 hover:text-emerald-400 transition-colors">
+                <a href={`/${locale}#projects`} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-stone-500 hover:text-emerald-400 transition-colors cursor-pointer">
                     <ChevronLeft size={14} /> {common('back')}
-                </Link>
+                </a>
                 <div className="flex items-center gap-6">
                     <a href="tel:1234567890" className="hidden md:flex items-center gap-2 font-bold text-xs text-white tracking-widest uppercase">
                         <Phone size={14} className="text-emerald-500" /> (123) 456-7890

@@ -19,17 +19,17 @@ export default async function RestaurantShowcase({
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: "projects.Showcase.restaurant" });
     const common = await getTranslations({ locale, namespace: "projects.Showcase.common" });
-
+    console.log('Rendering Restaurant Showcase page with locale:', locale);
     return (
         <div className="min-h-screen bg-stone-950 text-stone-200 selection:bg-orange-500/30 font-serif">
             {/* Engineered Floating Utility Bar */}
             <nav className="fixed top-6 left-6 right-6 z-50 flex items-center justify-between pointer-events-none">
-                <Link
-                    href="/#projects"
-                    className="pointer-events-auto flex items-center gap-2 px-4 py-2 bg-stone-900/80 backdrop-blur-md border border-stone-800 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-stone-400 hover:text-orange-500 transition-all shadow-xl"
+                <a
+                    href={`/${locale}#projects`}
+                    className="pointer-events-auto flex items-center gap-2 px-4 py-2 bg-stone-900/80 backdrop-blur-md border border-stone-800 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-stone-400 hover:text-orange-500 transition-all shadow-xl cursor-pointer"
                 >
                     <ChevronLeft size={14} /> {common('back')}
-                </Link>
+                </a>
 
                 <div className="pointer-events-auto">
                     <LanguageSwitcher />
@@ -81,16 +81,16 @@ export default async function RestaurantShowcase({
 
             <section className="bg-stone-900/50 py-32 px-6 border-y border-stone-900">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center font-sans">
-                        <div className="space-y-4">
-                            <MapPin className="w-6 h-6 text-orange-500 mx-auto" />
-                            <h4 className="font-bold uppercase tracking-widest text-xs">{t('nav.about')}</h4>
-                            <p className="text-sm text-stone-400 leading-relaxed">{t('location.address').split('\n').map((line, i) => (
-                                <span key={i}>
-                                    {line}
-                                    {i < t('location.address').split('\n').length - 1 && <br />}
-                                </span>
-                            ))}</p>
-                        </div>
+                    <div className="space-y-4">
+                        <MapPin className="w-6 h-6 text-orange-500 mx-auto" />
+                        <h4 className="font-bold uppercase tracking-widest text-xs">{t('nav.about')}</h4>
+                        <p className="text-sm text-stone-400 leading-relaxed">{t('location.address').split('\n').map((line, i) => (
+                            <span key={i}>
+                                {line}
+                                {i < t('location.address').split('\n').length - 1 && <br />}
+                            </span>
+                        ))}</p>
+                    </div>
                     <div className="space-y-4">
                         <Clock className="w-6 h-6 text-orange-500 mx-auto" />
                         <h4 className="font-bold uppercase tracking-widest text-xs">{t('hours.title')}</h4>
@@ -115,9 +115,12 @@ export default async function RestaurantShowcase({
 
             <footer className="py-20 text-center font-sans">
                 <div className="mb-8 opacity-20 hover:opacity-100 transition-opacity">
-                    <Link href="/" className="text-[10px] font-black uppercase tracking-[0.5em] text-stone-100">
+                    <a
+                        href={`/${locale}`}
+                        className="text-[10px] font-black uppercase tracking-[0.5em] text-stone-100 cursor-pointer"
+                    >
                         {t('footer.brand')}
-                    </Link>
+                    </a>
                 </div>
                 <p className="text-[10px] uppercase tracking-widest text-stone-600" dangerouslySetInnerHTML={{ __html: t('footer.closing') }} />
             </footer>

@@ -10,7 +10,7 @@
         "badge": "Estudiante de Ingeniería en Computación · Soluciones Web Modernas",
         "title": "Sitios web profesionales que",
         "titleGradient": "generan resultados reales",
-        "subtitle": "Sitios web personalizados y asequibles construidos con la última tecnología. Diseño limpio, rendimiento rápido y optimización SEO para destacar tu negocio.",
+        "subtitle": "Sitios web personalizados y asequibles construidos con la última tecnología. Diseño limpio, rendimiento rápido y optimización de busqueda web para destacar tu negocio.",
         "cta1": "Obtener Cotización Gratis",
         "cta2": "Ver Mi Trabajo",
         "trust1": "Entrega Rápida",
@@ -22,7 +22,7 @@
         "heading": "Precisión Ingenieril",
         "highlight": "al servicio del crecimiento",
         "paragraph1": "Hola, soy Agustin Marmor, estudiante de Ingeniería en Computación en Kissimmee que trata la web como un sistema técnico, no solo un proyecto de diseño.",
-        "paragraph2": "Bajo mi marca profesional, MarmorSlab, ingenierizo cimientos digitales de alto rendimiento para pequeños negocios. Un sitio web debe ser sólido e irrompible como una losa de concreto: optimizado para velocidad, seguridad y visibilidad en buscadores.",
+        "paragraph2": "Bajo mi marca profesional, MarmorSlab, desarrollo sitios web de alto rendimiento para pequeños, medianos, y grandes negocios. Un sitio web debe ser sólido e irrompible como una losa de concreto: optimizado para velocidad, seguridad y visibilidad en buscadores.",
         "highlightText": "Conecto la ingeniería compleja con soluciones empresariales limpias y efectivas.",
         "cards": {
             "engineering": {
@@ -50,7 +50,7 @@
             "title": "Diseño Personalizado",
             "description": "Diseños claros y modernos enfocados en usabilidad y la identidad de tu marca.",
             "features": [
-                "Diseño mobile-first",
+                "Diseño de prioridad móvil",
                 "Integración de marca",
                 "Enfoque en experiencia de usuario"
             ]
@@ -90,7 +90,7 @@
                 "tech": "Next.js · Tailwind · Resend"
             },
             "business": {
-                "title": "Slab Profesional",
+                "title": "Negocio Profesional",
                 "description": "Un portafolio corporativo minimalista enfocado en la velocidad de carga y la captura de clientes potenciales.",
                 "metrics": [
                     "Carga < 1s",
@@ -99,12 +99,12 @@
                 "tech": "TypeScript · Framer Motion"
             },
             "smallBusiness": {
-                "title": "Impulso Local",
-                "description": "Cimentación digital diseñada específicamente para pequeños negocios.",
+                "title": "Negocio Local",
+                "description": "Infraestructura digital diseñada específicamente para pequeños negocios.",
                 "metrics": [
-                    "Mobile First",
-                    "WhatsApp Link",
-                    "Google API"
+                    "Prioridad Móvil",
+                    "Enlace de WhatsApp",
+                    "API de Google"
                 ],
                 "tech": "React · Lucide Icons"
             }
@@ -237,7 +237,7 @@
     },
     "testimonials": {
         "title": "La Ventaja MarmorSlab",
-        "subtitle": "Combinamos principios de ingeniería en computación con diseño moderno para construir cimientos que no se agrietan.",
+        "subtitle": "Combino principios de ingeniería en computación con diseño moderno para construir cimientos que no se agrietan.",
         "benefit1": {
             "title": "Ultrarrápido",
             "text": "Tu sitio web cargará en menos de 2 segundos, manteniendo a los visitantes comprometidos y mejorando tu clasificación en buscadores."
@@ -252,7 +252,7 @@
         }
     },
     "pricing": {
-        "title": "Precios claros y sin sorpresass",
+        "title": "Precios claros y sin sorpresas",
         "subtitle": "Elige el plan que mejor se adapte a tu negocio",
         "popular": "Más Popular",
         "cta": "Comenzar",
@@ -389,7 +389,7 @@
         "unexpectedError": "Ocurrió un error inesperado."
     },
     "footer": {
-        "tagline": "Ingenierizo cimientos digitales de alto rendimiento para negocios modernos. Diseñado en el laboratorio, construido para ser la losa.",
+        "tagline": "Desarrollo páginas web de alto rendimiento para negocios modernos. Diseñado en el laboratorio, construido para ser la losa digital.",
         "signature": "Ingeniería Web por Agustín Marmor",
         "connect": "Conecta",
         "availabilityTitle": "Disponibilidad",
