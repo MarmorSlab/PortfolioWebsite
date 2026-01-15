@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
+import { Analytics } from "@vercel/analytics/next";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -123,6 +124,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <SpeedInsights />
+          <Analytics/>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -50,22 +50,22 @@ export default async function SmallBusinessDemo({
             <header className="relative pt-32 md:pt-40 pb-20 md:pb-24 px-4 md:px-6 overflow-hidden">
                 <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
                     <div className="space-y-8 md:space-y-10">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em]">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] animate-[fadeIn_0.8s_ease-out]">
                             <Star size={10} className="md:w-3 md:h-3" fill="currentColor" /> {t('hero.badge')}
                         </div>
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter text-white leading-[0.9] md:leading-[0.85]">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter text-white leading-[0.9] md:leading-[0.85] animate-[fadeInUp_1s_ease-out_0.2s_both]">
                             {t('hero.title')}
                         </h1>
-                        <p className="text-lg md:text-xl text-stone-400 leading-relaxed max-w-xl font-light">
+                        <p className="text-lg md:text-xl text-stone-400 leading-relaxed max-w-xl font-light animate-[fadeInUp_1s_ease-out_0.4s_both]">
                             {t('hero.description')}
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-4">
+                        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-4 animate-[fadeInUp_1s_ease-out_0.6s_both]">
                             <button className="px-8 md:px-10 py-4 md:py-5 bg-emerald-600 text-white font-black uppercase tracking-widest text-xs rounded-xl hover:bg-emerald-500 active:bg-emerald-500 active:scale-95 transition-all shadow-[0_20px_40px_rgba(16,185,129,0.2)] flex items-center justify-center gap-2">
                                 {t('hero.cta')} <ArrowRight size={16} className="md:w-4.5 md:h-4.5" />
                             </button>
                         </div>
                     </div>
-                    <div className="relative aspect-[4/5] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
+                    <div className="relative aspect-[4/5] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5 animate-[fadeInUp_1s_ease-out_0.3s_both]">
                         <Image
                             src="/images/local-hero.jpg"
                             alt="Landscaping excellence in Kissimmee"
@@ -80,8 +80,8 @@ export default async function SmallBusinessDemo({
             {/* 4. VISUAL SERVICES GRID */}
             <section className="py-20 md:py-32 px-4 md:px-6 max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-                    {['design', 'maintenance', 'hardscape'].map((service) => (
-                        <div key={service} className="space-y-4 md:space-y-6 group cursor-pointer active:scale-[0.98] transition-transform">
+                    {['design', 'maintenance', 'hardscape'].map((service, idx) => (
+                        <div key={service} className="space-y-4 md:space-y-6 group cursor-pointer active:scale-[0.98] transition-transform animate-[fadeInUp_0.8s_ease-out] opacity-0" style={{ animationDelay: `${idx * 0.15}s`, animationFillMode: 'forwards' }}>
                             <div className="relative h-64 md:h-80 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5">
                                 <Image
                                     src={`/images/service-${service}.jpg`}

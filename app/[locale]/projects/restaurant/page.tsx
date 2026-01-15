@@ -38,16 +38,16 @@ export default async function RestaurantShowcase({
             <header className="relative h-screen flex flex-col items-center justify-center px-4 md:px-6 overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070')] bg-cover bg-center opacity-30" />
                 <div className="relative z-10 text-center space-y-6 md:space-y-8 max-w-4xl">
-                    <div className="flex justify-center mb-4">
+                    <div className="flex justify-center mb-4 animate-[fadeIn_0.8s_ease-out]">
                         <Utensils className="w-10 h-10 md:w-12 md:h-12 text-orange-500" />
                     </div>
-                    <h1 className="text-4xl sm:text-6xl md:text-9xl font-light tracking-tighter italic text-stone-100">
+                    <h1 className="text-4xl sm:text-6xl md:text-9xl font-light tracking-tighter italic text-stone-100 animate-[fadeInUp_1s_ease-out_0.2s_both]">
                         {t('hero.title')}
                     </h1>
-                    <p className="text-xs sm:text-sm md:text-base font-sans font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-orange-500">
+                    <p className="text-xs sm:text-sm md:text-base font-sans font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-orange-500 animate-[fadeInUp_1s_ease-out_0.4s_both]">
                         {t('hero.subtitle')}
                     </p>
-                    <div className="pt-6 md:pt-8">
+                    <div className="pt-6 md:pt-8 animate-[fadeInUp_1s_ease-out_0.6s_both]">
                         <button className="px-8 py-3 md:px-10 md:py-4 bg-orange-700 hover:bg-orange-800 active:bg-orange-800 active:scale-95 text-white font-sans font-bold uppercase tracking-wide md:tracking-widest text-sm md:text-base transition-all rounded-lg md:rounded-none">
                             {t('nav.reserve')}
                         </button>
@@ -57,14 +57,14 @@ export default async function RestaurantShowcase({
 
 
             <section className="py-20 md:py-32 px-4 md:px-6 max-w-5xl mx-auto">
-                <div className="text-center mb-12 md:mb-20 space-y-4">
+                <div className="text-center mb-12 md:mb-20 space-y-4 animate-[fadeInUp_0.8s_ease-out]">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-light italic">{t('nav.menu')}</h2>
                     <div className="w-24 h-px bg-orange-500 mx-auto" />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 md:gap-16 font-sans">
                     {[0, 1, 2, 3].map((idx) => (
-                        <div key={idx} className="flex justify-between items-end border-b border-stone-800 pb-4 group cursor-default active:bg-stone-900/30 transition-colors">
+                        <div key={idx} className="flex justify-between items-end border-b border-stone-800 pb-4 group cursor-default active:bg-stone-900/30 transition-colors animate-[fadeInUp_0.6s_ease-out] opacity-0" style={{ animationDelay: `${idx * 0.1}s`, animationFillMode: 'forwards' }}>
                             <div className="space-y-1 flex-1 pr-4">
                                 <h3 className="font-bold text-base md:text-lg group-hover:text-orange-500 group-active:text-orange-500 transition-colors uppercase tracking-wide">
                                     {t(`menu.items.${idx}.title`)}
@@ -80,7 +80,7 @@ export default async function RestaurantShowcase({
 
             <section className="bg-stone-900/50 py-20 md:py-32 px-4 md:px-6 border-y border-stone-900">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 md:gap-12 text-center font-sans">
-                    <div className="space-y-4">
+                    <div className="space-y-4 animate-[fadeInUp_0.8s_ease-out]">
                         <MapPin className="w-6 h-6 text-orange-500 mx-auto" />
                         <h4 className="font-bold uppercase tracking-widest text-xs">{t('nav.about')}</h4>
                         <p className="text-sm text-stone-400 leading-relaxed">{t('location.address').split('\n').map((line, i) => (
@@ -90,12 +90,12 @@ export default async function RestaurantShowcase({
                             </span>
                         ))}</p>
                     </div>
-                    <div className="space-y-4">
+                    <div className="space-y-4 animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
                         <Clock className="w-6 h-6 text-orange-500 mx-auto" />
                         <h4 className="font-bold uppercase tracking-widest text-xs">{t('hours.title')}</h4>
                         <p className="text-sm text-stone-400 leading-relaxed">{t('hours.weekdays')}<br />{t('hours.sunday')}</p>
                     </div>
-                    <div className="space-y-4">
+                    <div className="space-y-4 animate-[fadeInUp_0.8s_ease-out_0.4s_both]">
                         <div className="flex justify-center gap-4">
                             <Instagram className="w-5 h-5 text-stone-500 hover:text-orange-500 active:text-orange-500 active:scale-110 cursor-pointer transition-all" />
                             <Facebook className="w-5 h-5 text-stone-500 hover:text-orange-500 active:text-orange-500 active:scale-110 cursor-pointer transition-all" />

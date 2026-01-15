@@ -58,16 +58,16 @@ export default async function BusinessDemo({
                 </div>
 
                 <div className="relative z-10 max-w-4xl text-center space-y-6 md:space-y-8">
-                    <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-blue-500/10 backdrop-blur-md border border-blue-400/20 rounded-full text-blue-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">
+                    <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-blue-500/10 backdrop-blur-md border border-blue-400/20 rounded-full text-blue-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] animate-[fadeIn_0.8s_ease-out]">
                         {t('hero.badge')}
                     </div>
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] md:leading-[0.95] text-white drop-shadow-lg">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] md:leading-[0.95] text-white drop-shadow-lg animate-[fadeInUp_1s_ease-out_0.2s_both]">
                         {t('hero.title')}
                     </h1>
-                    <p className="text-base md:text-lg lg:text-2xl max-w-2xl mx-auto font-light leading-relaxed drop-shadow text-slate-300">
+                    <p className="text-base md:text-lg lg:text-2xl max-w-2xl mx-auto font-light leading-relaxed drop-shadow text-slate-300 animate-[fadeInUp_1s_ease-out_0.4s_both]">
                         {t('hero.description')}
                     </p>
-                    <div className="pt-6 md:pt-10 flex flex-col md:flex-row gap-4 md:gap-6 justify-center">
+                    <div className="pt-6 md:pt-10 flex flex-col md:flex-row gap-4 md:gap-6 justify-center animate-[fadeInUp_1s_ease-out_0.6s_both]">
                         <button className="px-8 md:px-10 py-4 md:py-5 bg-white text-slate-900 font-black uppercase tracking-widest text-xs md:text-sm rounded-full hover:bg-blue-500 hover:text-white active:bg-blue-500 active:text-white active:scale-95 transition-all shadow-xl shadow-white/10 flex items-center justify-center gap-2 md:gap-3">
                             {t('hero.cta')} <ArrowRight size={16} className="md:w-4.5 md:h-4.5" />
                         </button>
@@ -80,7 +80,7 @@ export default async function BusinessDemo({
 
             {/* 3. VISUAL SERVICES GRID (With Real Images) */}
             <section className="py-20 md:py-32 px-4 md:px-8 max-w-7xl mx-auto">
-                <div className="mb-12 md:mb-20 space-y-3 md:space-y-4 text-center">
+                <div className="mb-12 md:mb-20 space-y-3 md:space-y-4 text-center animate-[fadeInUp_0.8s_ease-out]">
                     <span className="text-blue-400 font-mono text-xs md:text-sm tracking-[0.3em] uppercase">{t('services.label')}</span>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tighter">{t('services.title')}</h2>
                 </div>
@@ -90,8 +90,8 @@ export default async function BusinessDemo({
                         { id: 'strategy', icon: <Scale size={24} className="md:w-7 md:h-7" />, img: '/images/service-strategy.jpg' },
                         { id: 'analytics', icon: <BarChart3 size={24} className="md:w-7 md:h-7" />, img: '/images/service-analytics.jpg' },
                         { id: 'security', icon: <Shield size={24} className="md:w-7 md:h-7" />, img: '/images/service-security.jpg' }
-                    ].map((service) => (
-                        <div key={service.id} className="group relative h-[400px] md:h-[500px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-slate-800 active:scale-[0.98] transition-transform cursor-pointer">
+                    ].map((service, idx) => (
+                        <div key={service.id} className="group relative h-[400px] md:h-[500px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-slate-800 active:scale-[0.98] transition-transform cursor-pointer animate-[fadeInUp_0.8s_ease-out] opacity-0" style={{ animationDelay: `${idx * 0.15}s`, animationFillMode: 'forwards' }}>
                             {/* Service Background Image */}
                             <Image
                                 src={service.img}
