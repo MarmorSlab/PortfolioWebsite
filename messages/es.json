@@ -207,14 +207,22 @@
                 }
             },
             "business": {
+                "nav": {
+                    "solutions": "Soluciones",
+                    "global": "Global",
+                    "firm": "Firma"
+                },
                 "hero": {
+                    "badge": "Firma de Estrategia Global",
                     "title": "Estrategia Institucional. Diseñada para Crecer.",
                     "description": "Nova Strategy Group ofrece consultoría personalizada e infraestructura digital para firmas globales. Proporcionamos los cimientos técnicos para su excelencia corporativa.",
-                    "cta": "Explorar Soluciones"
+                    "cta": "Explorar Soluciones",
+                    "ctaSecondary": "Ver Video"
                 },
                 "services": {
                     "label": "Capacidades Centrales",
                     "title": "Nuestra Metodología",
+                    "learnMore": "Saber Más",
                     "strategy": {
                         "name": "Estrategia de Mercado",
                         "desc": "Marcos de trabajo propios diseñados para navegar paisajes regulatorios complejos y asegurar el dominio competitivo en mercados globales."
@@ -230,7 +238,19 @@
                 },
                 "data": {
                     "title": "Métricas de Rendimiento Inigualables",
-                    "description": "Nuestro panel integrado proporciona visibilidad de nivel ejecutivo sobre sus operaciones globales, asegurando la toma de decisiones basada en datos en cada etapa."
+                    "description": "Nuestro panel integrado proporciona visibilidad de nivel ejecutivo sobre sus operaciones globales, asegurando la toma de decisiones basada en datos en cada etapa.",
+                    "features": [
+                        "Rastreo de activos globales en tiempo real",
+                        "Modelado predictivo de mercado",
+                        "Encriptación de datos de grado bancario"
+                    ]
+                },
+                "footer": {
+                    "brandName": "Nova Strategy",
+                    "attribution": "Presencia Digital Personalmente Diseñada por Agustin Marmor",
+                    "year": "2025",
+                    "terms": "Términos",
+                    "privacy": "Privacidad"
                 }
             }
         }

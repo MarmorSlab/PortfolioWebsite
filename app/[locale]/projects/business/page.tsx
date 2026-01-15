@@ -32,9 +32,9 @@ export default async function BusinessDemo({
                 </a>
                 <div className="flex items-center gap-8">
                     <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
-                        <span className="hover:text-white cursor-pointer transition-colors">Solutions</span>
-                        <span className="hover:text-white cursor-pointer transition-colors">Global</span>
-                        <span className="hover:text-white cursor-pointer transition-colors">Firm</span>
+                        <span className="hover:text-white cursor-pointer transition-colors">{t('nav.solutions')}</span>
+                        <span className="hover:text-white cursor-pointer transition-colors">{t('nav.global')}</span>
+                        <span className="hover:text-white cursor-pointer transition-colors">{t('nav.firm')}</span>
                     </div>
                     <div className="bg-white/5 p-1 rounded-md">
                         <LanguageSwitcher />
@@ -59,7 +59,7 @@ export default async function BusinessDemo({
 
                 <div className="relative z-10 max-w-4xl text-center space-y-8">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 backdrop-blur-md border border-blue-400/20 rounded-full text-blue-400 text-xs font-bold uppercase tracking-[0.2em]">
-                        Global Strategy Firm
+                        {t('hero.badge')}
                     </div>
                     <h1 className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.95] text-white drop-shadow-lg">
                         {t('hero.title')}
@@ -72,7 +72,7 @@ export default async function BusinessDemo({
                             {t('hero.cta')} <ArrowRight size={18} />
                         </button>
                         <button className="px-10 py-5 bg-transparent border-2 border-white/20 text-white font-black uppercase tracking-widest text-sm rounded-full hover:bg-white/10 transition-all">
-                            Watch Reel
+                            {t('hero.ctaSecondary')}
                         </button>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ export default async function BusinessDemo({
                                     {t(`services.${service.id}.desc`)}
                                 </p>
                                 <div className="mt-8 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-blue-400 font-bold uppercase tracking-widest text-xs">
-                                    Learn More <ArrowRight size={14} />
+                                    {t('services.learnMore')} <ArrowRight size={14} />
                                 </div>
                             </div>
                         </div>
@@ -128,12 +128,8 @@ export default async function BusinessDemo({
                             {t('data.description')}
                         </p>
                         <ul className="space-y-4">
-                            {[
-                                "Real-time global asset tracking",
-                                "Predictive market modeling",
-                                "Bank-grade data encryption"
-                            ].map(item => (
-                                <li key={item} className="flex items-center gap-3 text-slate-300 font-medium">
+                            {(t.raw('data.features') as string[]).map((item, idx) => (
+                                <li key={idx} className="flex items-center gap-3 text-slate-300 font-medium">
                                     <CheckCircle2 size={20} className="text-blue-500" /> {item}
                                 </li>
                             ))}
@@ -159,18 +155,16 @@ export default async function BusinessDemo({
                     <div className="space-y-6">
                         <div className="flex items-center gap-3">
                             <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center font-black text-slate-900 text-sm shadow-lg">N</div>
-                            <span className="font-black text-white tracking-[0.2em] uppercase text-lg">Nova Strategy</span>
+                            <span className="font-black text-white tracking-[0.2em] uppercase text-lg">{t('footer.brandName')}</span>
                         </div>
                         <p className="text-xs text-slate-500 uppercase tracking-[0.3em] leading-relaxed font-bold">
-                            Digital Presence Personally Engineered by <br />
-                            <span className="text-slate-300">Agustin Marmor</span>
-                            <span className="text-slate-700">© 2025</span>
+                            {t('footer.attribution')}<br />
+                            <span className="text-slate-700">© {t('footer.year')}</span>
                         </p>
                     </div>
                     <div className="flex justify-center md:justify-end gap-12 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
-                        <span className="hover:text-white cursor-pointer transition-colors">Terms</span>
-                        <span className="hover:text-white cursor-pointer transition-colors">Privacy</span>
-
+                        <span className="hover:text-white cursor-pointer transition-colors">{t('footer.terms')}</span>
+                        <span className="hover:text-white cursor-pointer transition-colors">{t('footer.privacy')}</span>
                     </div>
                 </div>
             </footer>

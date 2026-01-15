@@ -207,14 +207,22 @@
                 }
             },
             "business": {
+                "nav": {
+                    "solutions": "Solutions",
+                    "global": "Global",
+                    "firm": "Firm"
+                },
                 "hero": {
+                    "badge": "Global Strategy Firm",
                     "title": "Institutional Strategy. Engineered for Growth.",
                     "description": "Nova Strategy Group delivers bespoke consulting and digital infrastructure for global firms. We provide the technical foundations for your corporate excellence.",
-                    "cta": "Explore Our Solutions"
+                    "cta": "Explore Our Solutions",
+                    "ctaSecondary": "Watch Reel"
                 },
                 "services": {
                     "label": "Core Capabilities",
                     "title": "Our Methodology",
+                    "learnMore": "Learn More",
                     "strategy": {
                         "name": "Market Strategy",
                         "desc": "Proprietary frameworks designed to navigate complex regulatory landscapes and secure competitive dominance in global markets."
@@ -230,7 +238,19 @@
                 },
                 "data": {
                     "title": "Unrivaled Performance Metrics",
-                    "description": "Our integrated dashboard provides executive-level visibility into your global operations, ensuring data-backed decision-making at every stage."
+                    "description": "Our integrated dashboard provides executive-level visibility into your global operations, ensuring data-backed decision-making at every stage.",
+                    "features": [
+                        "Real-time global asset tracking",
+                        "Predictive market modeling",
+                        "Bank-grade data encryption"
+                    ]
+                },
+                "footer": {
+                    "brandName": "Nova Strategy",
+                    "attribution": "Digital Presence Personally Engineered by Agustin Marmor",
+                    "year": "2025",
+                    "terms": "Terms",
+                    "privacy": "Privacy"
                 }
             }
         }
