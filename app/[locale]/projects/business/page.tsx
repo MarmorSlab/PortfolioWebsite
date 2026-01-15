@@ -26,15 +26,15 @@ export default async function BusinessDemo({
             <nav className="fixed top-0 w-full z-50 flex items-center justify-between px-4 md:px-8 py-4 md:py-6 bg-slate-900/60 backdrop-blur-md border-b border-white/5">
                 <a
                     href={`/${locale}#projects`}
-                    className="flex items-center gap-2 md:gap-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-all group cursor-pointer"
+                    className="flex items-center gap-2 md:gap-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white active:text-white active:scale-95 transition-all group cursor-pointer"
                 >
-                    <ChevronLeft size={14} className="md:w-4 md:h-4 group-hover:-translate-x-1 transition-transform" /> {common('back')}
+                    <ChevronLeft size={14} className="md:w-4 md:h-4 group-hover:-translate-x-1 group-active:-translate-x-1 transition-transform" /> {common('back')}
                 </a>
                 <div className="flex items-center gap-4 md:gap-8">
                     <div className="hidden md:flex gap-6 lg:gap-8 text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
-                        <span className="hover:text-white cursor-pointer transition-colors">{t('nav.solutions')}</span>
-                        <span className="hover:text-white cursor-pointer transition-colors">{t('nav.global')}</span>
-                        <span className="hover:text-white cursor-pointer transition-colors">{t('nav.firm')}</span>
+                        <span className="hover:text-white active:text-white cursor-pointer transition-colors">{t('nav.solutions')}</span>
+                        <span className="hover:text-white active:text-white cursor-pointer transition-colors">{t('nav.global')}</span>
+                        <span className="hover:text-white active:text-white cursor-pointer transition-colors">{t('nav.firm')}</span>
                     </div>
                     <div className="bg-white/5 p-1 rounded-md">
                         <LanguageSwitcher />
@@ -68,10 +68,10 @@ export default async function BusinessDemo({
                         {t('hero.description')}
                     </p>
                     <div className="pt-6 md:pt-10 flex flex-col md:flex-row gap-4 md:gap-6 justify-center">
-                        <button className="px-8 md:px-10 py-4 md:py-5 bg-white text-slate-900 font-black uppercase tracking-widest text-xs md:text-sm rounded-full hover:bg-blue-500 hover:text-white transition-all shadow-xl shadow-white/10 flex items-center justify-center gap-2 md:gap-3">
+                        <button className="px-8 md:px-10 py-4 md:py-5 bg-white text-slate-900 font-black uppercase tracking-widest text-xs md:text-sm rounded-full hover:bg-blue-500 hover:text-white active:bg-blue-500 active:text-white active:scale-95 transition-all shadow-xl shadow-white/10 flex items-center justify-center gap-2 md:gap-3">
                             {t('hero.cta')} <ArrowRight size={16} className="md:w-4.5 md:h-4.5" />
                         </button>
-                        <button className="px-8 md:px-10 py-4 md:py-5 bg-transparent border-2 border-white/20 text-white font-black uppercase tracking-widest text-xs md:text-sm rounded-full hover:bg-white/10 transition-all">
+                        <button className="px-8 md:px-10 py-4 md:py-5 bg-transparent border-2 border-white/20 text-white font-black uppercase tracking-widest text-xs md:text-sm rounded-full hover:bg-white/10 active:bg-white/10 active:scale-95 transition-all">
                             {t('hero.ctaSecondary')}
                         </button>
                     </div>
@@ -91,13 +91,13 @@ export default async function BusinessDemo({
                         { id: 'analytics', icon: <BarChart3 size={24} className="md:w-7 md:h-7" />, img: '/images/service-analytics.jpg' },
                         { id: 'security', icon: <Shield size={24} className="md:w-7 md:h-7" />, img: '/images/service-security.jpg' }
                     ].map((service) => (
-                        <div key={service.id} className="group relative h-[400px] md:h-[500px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-slate-800">
+                        <div key={service.id} className="group relative h-[400px] md:h-[500px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-slate-800 active:scale-[0.98] transition-transform cursor-pointer">
                             {/* Service Background Image */}
                             <Image
                                 src={service.img}
                                 alt={t(`services.${service.id}.name`)}
                                 fill
-                                className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                className="object-cover opacity-60 group-hover:opacity-100 group-active:opacity-100 group-hover:scale-105 group-active:scale-105 transition-all duration-700"
                             />
                             {/* Content Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent p-10 flex flex-col justify-end">
@@ -105,10 +105,10 @@ export default async function BusinessDemo({
                                     {service.icon}
                                 </div>
                                 <h3 className="text-3xl font-bold text-white mb-4">{t(`services.${service.id}.name`)}</h3>
-                                <p className="text-slate-300 leading-relaxed text-base line-clamp-3 group-hover:line-clamp-none transition-all">
+                                <p className="text-slate-300 leading-relaxed text-base line-clamp-3 group-hover:line-clamp-none group-active:line-clamp-none transition-all">
                                     {t(`services.${service.id}.desc`)}
                                 </p>
-                                <div className="mt-8 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 text-blue-400 font-bold uppercase tracking-widest text-xs">
+                                <div className="mt-8 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity flex items-center gap-2 text-blue-400 font-bold uppercase tracking-widest text-xs">
                                     {t('services.learnMore')} <ArrowRight size={14} />
                                 </div>
                             </div>
@@ -163,8 +163,8 @@ export default async function BusinessDemo({
                         </p>
                     </div>
                     <div className="flex justify-center md:justify-end gap-12 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">
-                        <span className="hover:text-white cursor-pointer transition-colors">{t('footer.terms')}</span>
-                        <span className="hover:text-white cursor-pointer transition-colors">{t('footer.privacy')}</span>
+                        <span className="hover:text-white active:text-white active:scale-95 cursor-pointer transition-all inline-block">{t('footer.terms')}</span>
+                        <span className="hover:text-white active:text-white active:scale-95 cursor-pointer transition-all inline-block">{t('footer.privacy')}</span>
                     </div>
                 </div>
             </footer>

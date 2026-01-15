@@ -25,17 +25,17 @@ export default async function SmallBusinessDemo({
         <div className="min-h-screen bg-[#0f110f] text-stone-300 selection:bg-emerald-500/30 font-sans antialiased">
             {/* 1. STICKY MOBILE ACTION BAR */}
             <div className="fixed bottom-6 left-6 right-6 z-50 md:hidden flex gap-4">
-                <a href="tel:1234567890" className="flex-1 bg-white text-black py-4 rounded-2xl flex items-center justify-center gap-2 font-black shadow-2xl">
+                <a href="tel:1234567890" className="flex-1 bg-white text-black py-4 rounded-2xl flex items-center justify-center gap-2 font-black shadow-2xl active:scale-95 active:bg-emerald-500 active:text-white transition-all">
                     <Phone size={20} /> Call Now
                 </a>
-                <a href="https://wa.me/11234567890" className="w-16 bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-2xl">
+                <a href="https://wa.me/11234567890" className="w-16 bg-emerald-500 text-white rounded-2xl flex items-center justify-center shadow-2xl active:scale-95 active:bg-white active:text-emerald-600 transition-all">
                     <MessageCircle size={24} />
                 </a>
             </div>
 
             {/* 2. NAVIGATION BAR */}
             <nav className="fixed top-0 w-full z-40 bg-[#0f110f]/60 backdrop-blur-xl border-b border-white/5 px-6 py-4 flex items-center justify-between">
-                <a href={`/${locale}#projects`} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-stone-500 hover:text-emerald-400 transition-colors cursor-pointer">
+                <a href={`/${locale}#projects`} className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-stone-500 hover:text-emerald-400 active:text-emerald-400 active:scale-95 transition-all cursor-pointer">
                     <ChevronLeft size={14} /> {common('back')}
                 </a>
                 <div className="flex items-center gap-6">
@@ -60,7 +60,7 @@ export default async function SmallBusinessDemo({
                             {t('hero.description')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-4">
-                            <button className="px-8 md:px-10 py-4 md:py-5 bg-emerald-600 text-white font-black uppercase tracking-widest text-xs rounded-xl hover:bg-emerald-500 transition-all shadow-[0_20px_40px_rgba(16,185,129,0.2)] flex items-center justify-center gap-2">
+                            <button className="px-8 md:px-10 py-4 md:py-5 bg-emerald-600 text-white font-black uppercase tracking-widest text-xs rounded-xl hover:bg-emerald-500 active:bg-emerald-500 active:scale-95 transition-all shadow-[0_20px_40px_rgba(16,185,129,0.2)] flex items-center justify-center gap-2">
                                 {t('hero.cta')} <ArrowRight size={16} className="md:w-4.5 md:h-4.5" />
                             </button>
                         </div>
@@ -81,13 +81,13 @@ export default async function SmallBusinessDemo({
             <section className="py-20 md:py-32 px-4 md:px-6 max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-8 md:gap-12">
                     {['design', 'maintenance', 'hardscape'].map((service) => (
-                        <div key={service} className="space-y-4 md:space-y-6 group cursor-default">
+                        <div key={service} className="space-y-4 md:space-y-6 group cursor-pointer active:scale-[0.98] transition-transform">
                             <div className="relative h-64 md:h-80 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5">
                                 <Image
                                     src={`/images/service-${service}.jpg`}
                                     alt={service}
                                     fill
-                                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                    className="object-cover opacity-60 group-hover:opacity-100 group-active:opacity-100 group-hover:scale-105 group-active:scale-105 transition-all duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f110f] to-transparent" />
                             </div>
@@ -129,7 +129,7 @@ export default async function SmallBusinessDemo({
                         <div className="text-[10px] font-bold text-stone-700 uppercase tracking-widest">
                             {t('footer.availability')}
                         </div>
-                        <button className="px-10 py-5 bg-white text-black rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-emerald-500 hover:text-white transition-all">
+                        <button className="px-10 py-5 bg-white text-black rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-emerald-500 hover:text-white active:bg-emerald-500 active:text-white active:scale-95 transition-all">
                             {t('footer.cta')}
                         </button>
                     </div>

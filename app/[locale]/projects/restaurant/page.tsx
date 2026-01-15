@@ -26,7 +26,7 @@ export default async function RestaurantShowcase({
             <nav className="fixed top-4 left-4 right-4 md:top-6 md:left-6 md:right-6 z-50 flex items-center justify-between pointer-events-none">
                 <a
                     href={`/${locale}#projects`}
-                    className="pointer-events-auto flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-stone-900/80 backdrop-blur-md border border-stone-800 rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-stone-400 hover:text-orange-500 transition-all shadow-xl cursor-pointer">
+                    className="pointer-events-auto flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-stone-900/80 backdrop-blur-md border border-stone-800 rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-stone-400 hover:text-orange-500 active:text-orange-500 active:scale-95 transition-all shadow-xl cursor-pointer">
                     <ChevronLeft size={12} className="md:w-3.5 md:h-3.5" /> {common('back')}
                 </a>
 
@@ -48,7 +48,7 @@ export default async function RestaurantShowcase({
                         {t('hero.subtitle')}
                     </p>
                     <div className="pt-6 md:pt-8">
-                        <button className="px-8 py-3 md:px-10 md:py-4 bg-orange-700 hover:bg-orange-800 text-white font-sans font-bold uppercase tracking-wide md:tracking-widest text-sm md:text-base transition-all rounded-lg md:rounded-none">
+                        <button className="px-8 py-3 md:px-10 md:py-4 bg-orange-700 hover:bg-orange-800 active:bg-orange-800 active:scale-95 text-white font-sans font-bold uppercase tracking-wide md:tracking-widest text-sm md:text-base transition-all rounded-lg md:rounded-none">
                             {t('nav.reserve')}
                         </button>
                     </div>
@@ -64,9 +64,9 @@ export default async function RestaurantShowcase({
 
                 <div className="grid md:grid-cols-2 gap-8 md:gap-16 font-sans">
                     {[0, 1, 2, 3].map((idx) => (
-                        <div key={idx} className="flex justify-between items-end border-b border-stone-800 pb-4 group cursor-default">
+                        <div key={idx} className="flex justify-between items-end border-b border-stone-800 pb-4 group cursor-default active:bg-stone-900/30 transition-colors">
                             <div className="space-y-1 flex-1 pr-4">
-                                <h3 className="font-bold text-base md:text-lg group-hover:text-orange-500 transition-colors uppercase tracking-wide">
+                                <h3 className="font-bold text-base md:text-lg group-hover:text-orange-500 group-active:text-orange-500 transition-colors uppercase tracking-wide">
                                     {t(`menu.items.${idx}.title`)}
                                 </h3>
                                 <p className="text-xs md:text-sm text-stone-500 italic">{t(`menu.items.${idx}.desc`)}</p>
@@ -97,8 +97,8 @@ export default async function RestaurantShowcase({
                     </div>
                     <div className="space-y-4">
                         <div className="flex justify-center gap-4">
-                            <Instagram className="w-5 h-5 text-stone-500 hover:text-orange-500 cursor-pointer" />
-                            <Facebook className="w-5 h-5 text-stone-500 hover:text-orange-500 cursor-pointer" />
+                            <Instagram className="w-5 h-5 text-stone-500 hover:text-orange-500 active:text-orange-500 active:scale-110 cursor-pointer transition-all" />
+                            <Facebook className="w-5 h-5 text-stone-500 hover:text-orange-500 active:text-orange-500 active:scale-110 cursor-pointer transition-all" />
                         </div>
                         <h4 className="font-bold uppercase tracking-widest text-xs">{t('social.title')}</h4>
                         <p className="text-sm text-stone-400 leading-relaxed">{t('social.description').split('\n').map((line, i) => (
@@ -113,10 +113,10 @@ export default async function RestaurantShowcase({
 
 
             <footer className="py-20 text-center font-sans">
-                <div className="mb-8 opacity-20 hover:opacity-100 transition-opacity">
+                <div className="mb-8 opacity-20 hover:opacity-100 active:opacity-100 transition-opacity">
                     <a
                         href={`/${locale}`}
-                        className="text-[10px] font-black uppercase tracking-[0.5em] text-stone-100 cursor-pointer"
+                        className="text-[10px] font-black uppercase tracking-[0.5em] text-stone-100 cursor-pointer active:scale-95 inline-block transition-transform"
                     >
                         {t('footer.brand')}
                     </a>
