@@ -81,13 +81,13 @@ export default async function SmallBusinessDemo({
             <section className="py-20 md:py-32 px-4 md:px-6 max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-8 md:gap-12">
                     {['design', 'maintenance', 'hardscape'].map((service, idx) => (
-                        <div key={service} className="space-y-4 md:space-y-6 group cursor-pointer active:scale-[0.98] transition-transform animate-[fadeInUp_0.8s_ease-out] opacity-0" style={{ animationDelay: `${idx * 0.15}s`, animationFillMode: 'forwards' }}>
+                        <div key={service} className="space-y-4 md:space-y-6 group cursor-pointer transition-transform animate-[fadeInUp_0.8s_ease-out] opacity-0" style={{ animationDelay: `${idx * 0.15}s`, animationFillMode: 'forwards' }}>
                             <div className="relative h-64 md:h-80 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5">
                                 <Image
                                     src={`/images/service-${service}.jpg`}
                                     alt={service}
                                     fill
-                                    className="object-cover opacity-60 group-hover:opacity-100 group-active:opacity-100 group-hover:scale-105 group-active:scale-105 transition-all duration-700"
+                                    className="object-cover opacity-70 transition-all duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f110f] to-transparent" />
                             </div>
@@ -95,7 +95,7 @@ export default async function SmallBusinessDemo({
                             <p className="text-stone-500 leading-relaxed text-sm">{t(`services.${service}.desc`)}</p>
                             <div className="flex flex-wrap gap-2 pt-2">
                                 {t.raw(`services.${service}.features`).map((f: string) => (
-                                    <span key={f} className="text-[9px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-500/5 px-3 py-1 rounded-full border border-emerald-500/10">
+                                    <span key={f} className="text-[9px] font-black text-emerald-500 uppercase tracking-widest bg-emerald-500/5 px-3 py-1 rounded-full border border-emerald-500/10 animate-[pulse_4s_ease-in-out_infinite]" style={{ animationDelay: `${Math.random() * 2}s` }}>
                                         {f}
                                     </span>
                                 ))}

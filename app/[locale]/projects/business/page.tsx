@@ -91,24 +91,24 @@ export default async function BusinessDemo({
                         { id: 'analytics', icon: <BarChart3 size={24} className="md:w-7 md:h-7" />, img: '/images/service-analytics.jpg' },
                         { id: 'security', icon: <Shield size={24} className="md:w-7 md:h-7" />, img: '/images/service-security.jpg' }
                     ].map((service, idx) => (
-                        <div key={service.id} className="group relative h-[400px] md:h-[500px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-slate-800 active:scale-[0.98] transition-transform cursor-pointer animate-[fadeInUp_0.8s_ease-out] opacity-0" style={{ animationDelay: `${idx * 0.15}s`, animationFillMode: 'forwards' }}>
+                        <div key={service.id} className="group relative h-[400px] md:h-[500px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-slate-800 transition-transform cursor-pointer animate-[fadeInUp_0.8s_ease-out] opacity-0" style={{ animationDelay: `${idx * 0.15}s`, animationFillMode: 'forwards' }}>
                             {/* Service Background Image */}
                             <Image
                                 src={service.img}
                                 alt={t(`services.${service.id}.name`)}
                                 fill
-                                className="object-cover opacity-60 group-hover:opacity-100 group-active:opacity-100 group-hover:scale-105 group-active:scale-105 transition-all duration-700"
+                                className="object-cover opacity-70 transition-all duration-700"
                             />
                             {/* Content Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent p-10 flex flex-col justify-end">
-                                <div className="w-14 h-14 bg-blue-500 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
+                                <div className="w-14 h-14 bg-blue-500 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20 animate-[pulse_3s_ease-in-out_infinite]">
                                     {service.icon}
                                 </div>
                                 <h3 className="text-3xl font-bold text-white mb-4">{t(`services.${service.id}.name`)}</h3>
-                                <p className="text-slate-300 leading-relaxed text-base line-clamp-3 group-hover:line-clamp-none group-active:line-clamp-none transition-all">
+                                <p className="text-slate-300 leading-relaxed text-base">
                                     {t(`services.${service.id}.desc`)}
                                 </p>
-                                <div className="mt-8 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity flex items-center gap-2 text-blue-400 font-bold uppercase tracking-widest text-xs">
+                                <div className="mt-8 flex items-center gap-2 text-blue-400 font-bold uppercase tracking-widest text-xs">
                                     {t('services.learnMore')} <ArrowRight size={14} />
                                 </div>
                             </div>
