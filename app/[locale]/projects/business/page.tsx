@@ -23,15 +23,15 @@ export default async function BusinessDemo({
         // Use slate-900 for a richer, professional dark tone
         <div className="min-h-screen bg-slate-900 text-slate-200 selection:bg-blue-500/30 font-sans antialiased">
             {/* 1. PORTFOLIO ESCAPE HATCH */}
-            <nav className="fixed top-0 w-full z-50 flex items-center justify-between px-8 py-6 bg-slate-900/60 backdrop-blur-md border-b border-white/5">
+            <nav className="fixed top-0 w-full z-50 flex items-center justify-between px-4 md:px-8 py-4 md:py-6 bg-slate-900/60 backdrop-blur-md border-b border-white/5">
                 <a
                     href={`/${locale}#projects`}
-                    className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-all group cursor-pointer"
+                    className="flex items-center gap-2 md:gap-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-all group cursor-pointer"
                 >
-                    <ChevronLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> {common('back')}
+                    <ChevronLeft size={14} className="md:w-4 md:h-4 group-hover:-translate-x-1 transition-transform" /> {common('back')}
                 </a>
-                <div className="flex items-center gap-8">
-                    <div className="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                <div className="flex items-center gap-4 md:gap-8">
+                    <div className="hidden md:flex gap-6 lg:gap-8 text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] text-slate-400">
                         <span className="hover:text-white cursor-pointer transition-colors">{t('nav.solutions')}</span>
                         <span className="hover:text-white cursor-pointer transition-colors">{t('nav.global')}</span>
                         <span className="hover:text-white cursor-pointer transition-colors">{t('nav.firm')}</span>
@@ -43,7 +43,7 @@ export default async function BusinessDemo({
             </nav>
 
             {/* 2. REALISTIC HERO SECTION WITH IMAGE */}
-            <header className="relative h-screen flex flex-col items-center justify-center px-8 overflow-hidden">
+            <header className="relative h-screen flex flex-col items-center justify-center px-4 md:px-8 overflow-hidden">
                 {/* High-Quality Corporate Image Background */}
                 <div className="absolute inset-0">
                     <Image
@@ -57,21 +57,21 @@ export default async function BusinessDemo({
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/40" />
                 </div>
 
-                <div className="relative z-10 max-w-4xl text-center space-y-8">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 backdrop-blur-md border border-blue-400/20 rounded-full text-blue-400 text-xs font-bold uppercase tracking-[0.2em]">
+                <div className="relative z-10 max-w-4xl text-center space-y-6 md:space-y-8">
+                    <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-blue-500/10 backdrop-blur-md border border-blue-400/20 rounded-full text-blue-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">
                         {t('hero.badge')}
                     </div>
-                    <h1 className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.95] text-white drop-shadow-lg">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] md:leading-[0.95] text-white drop-shadow-lg">
                         {t('hero.title')}
                     </h1>
-                    <p className="text-slate-300 text-lg md:text-2xl max-w-2xl mx-auto font-light leading-relaxed drop-shadow">
+                    <p className="text-base md:text-lg lg:text-2xl max-w-2xl mx-auto font-light leading-relaxed drop-shadow text-slate-300">
                         {t('hero.description')}
                     </p>
-                    <div className="pt-10 flex flex-col md:flex-row gap-6 justify-center">
-                        <button className="px-10 py-5 bg-white text-slate-900 font-black uppercase tracking-widest text-sm rounded-full hover:bg-blue-500 hover:text-white transition-all shadow-xl shadow-white/10 flex items-center gap-3">
-                            {t('hero.cta')} <ArrowRight size={18} />
+                    <div className="pt-6 md:pt-10 flex flex-col md:flex-row gap-4 md:gap-6 justify-center">
+                        <button className="px-8 md:px-10 py-4 md:py-5 bg-white text-slate-900 font-black uppercase tracking-widest text-xs md:text-sm rounded-full hover:bg-blue-500 hover:text-white transition-all shadow-xl shadow-white/10 flex items-center justify-center gap-2 md:gap-3">
+                            {t('hero.cta')} <ArrowRight size={16} className="md:w-4.5 md:h-4.5" />
                         </button>
-                        <button className="px-10 py-5 bg-transparent border-2 border-white/20 text-white font-black uppercase tracking-widest text-sm rounded-full hover:bg-white/10 transition-all">
+                        <button className="px-8 md:px-10 py-4 md:py-5 bg-transparent border-2 border-white/20 text-white font-black uppercase tracking-widest text-xs md:text-sm rounded-full hover:bg-white/10 transition-all">
                             {t('hero.ctaSecondary')}
                         </button>
                     </div>
@@ -79,19 +79,19 @@ export default async function BusinessDemo({
             </header>
 
             {/* 3. VISUAL SERVICES GRID (With Real Images) */}
-            <section className="py-32 px-8 max-w-7xl mx-auto">
-                <div className="mb-20 space-y-4 text-center">
-                    <span className="text-blue-400 font-mono text-sm tracking-[0.3em] uppercase">{t('services.label')}</span>
-                    <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter">{t('services.title')}</h2>
+            <section className="py-20 md:py-32 px-4 md:px-8 max-w-7xl mx-auto">
+                <div className="mb-12 md:mb-20 space-y-3 md:space-y-4 text-center">
+                    <span className="text-blue-400 font-mono text-xs md:text-sm tracking-[0.3em] uppercase">{t('services.label')}</span>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tighter">{t('services.title')}</h2>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-6 md:gap-8">
                     {[
-                        { id: 'strategy', icon: <Scale size={28} />, img: '/images/service-strategy.jpg' },
-                        { id: 'analytics', icon: <BarChart3 size={28} />, img: '/images/service-analytics.jpg' },
-                        { id: 'security', icon: <Shield size={28} />, img: '/images/service-security.jpg' }
+                        { id: 'strategy', icon: <Scale size={24} className="md:w-7 md:h-7" />, img: '/images/service-strategy.jpg' },
+                        { id: 'analytics', icon: <BarChart3 size={24} className="md:w-7 md:h-7" />, img: '/images/service-analytics.jpg' },
+                        { id: 'security', icon: <Shield size={24} className="md:w-7 md:h-7" />, img: '/images/service-security.jpg' }
                     ].map((service) => (
-                        <div key={service.id} className="group relative h-[500px] rounded-[2rem] overflow-hidden bg-slate-800">
+                        <div key={service.id} className="group relative h-[400px] md:h-[500px] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-slate-800">
                             {/* Service Background Image */}
                             <Image
                                 src={service.img}

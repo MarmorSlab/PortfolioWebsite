@@ -47,25 +47,25 @@ export default async function SmallBusinessDemo({
             </nav>
 
             {/* 3. HERO SECTION */}
-            <header className="relative pt-40 pb-24 px-6 overflow-hidden">
-                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
-                    <div className="space-y-10">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
-                            <Star size={12} fill="currentColor" /> {t('hero.badge')}
+            <header className="relative pt-32 md:pt-40 pb-20 md:pb-24 px-4 md:px-6 overflow-hidden">
+                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
+                    <div className="space-y-8 md:space-y-10">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em]">
+                            <Star size={10} className="md:w-3 md:h-3" fill="currentColor" /> {t('hero.badge')}
                         </div>
-                        <h1 className="text-5xl md:text-8xl font-black tracking-tighter text-white leading-[0.85]">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black tracking-tighter text-white leading-[0.9] md:leading-[0.85]">
                             {t('hero.title')}
                         </h1>
-                        <p className="text-xl text-stone-400 leading-relaxed max-w-xl font-light">
+                        <p className="text-lg md:text-xl text-stone-400 leading-relaxed max-w-xl font-light">
                             {t('hero.description')}
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-6 pt-4">
-                            <button className="px-10 py-5 bg-emerald-600 text-white font-black uppercase tracking-widest text-xs rounded-xl hover:bg-emerald-500 transition-all shadow-[0_20px_40px_rgba(16,185,129,0.2)] flex items-center justify-center gap-2">
-                                {t('hero.cta')} <ArrowRight size={18} />
+                        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 pt-4">
+                            <button className="px-8 md:px-10 py-4 md:py-5 bg-emerald-600 text-white font-black uppercase tracking-widest text-xs rounded-xl hover:bg-emerald-500 transition-all shadow-[0_20px_40px_rgba(16,185,129,0.2)] flex items-center justify-center gap-2">
+                                {t('hero.cta')} <ArrowRight size={16} className="md:w-4.5 md:h-4.5" />
                             </button>
                         </div>
                     </div>
-                    <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
+                    <div className="relative aspect-[4/5] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
                         <Image
                             src="/images/local-hero.jpg"
                             alt="Landscaping excellence in Kissimmee"
@@ -78,11 +78,11 @@ export default async function SmallBusinessDemo({
             </header>
 
             {/* 4. VISUAL SERVICES GRID */}
-            <section className="py-32 px-6 max-w-7xl mx-auto">
-                <div className="grid md:grid-cols-3 gap-12">
+            <section className="py-20 md:py-32 px-4 md:px-6 max-w-7xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-8 md:gap-12">
                     {['design', 'maintenance', 'hardscape'].map((service) => (
-                        <div key={service} className="space-y-6 group cursor-default">
-                            <div className="relative h-80 rounded-[2.5rem] overflow-hidden border border-white/5">
+                        <div key={service} className="space-y-4 md:space-y-6 group cursor-default">
+                            <div className="relative h-64 md:h-80 rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/5">
                                 <Image
                                     src={`/images/service-${service}.jpg`}
                                     alt={service}
@@ -91,7 +91,7 @@ export default async function SmallBusinessDemo({
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f110f] to-transparent" />
                             </div>
-                            <h3 className="text-3xl font-bold text-white tracking-tight">{t(`services.${service}.title`)}</h3>
+                            <h3 className="text-2xl md:text-3xl font-bold text-white tracking-tight">{t(`services.${service}.title`)}</h3>
                             <p className="text-stone-500 leading-relaxed text-sm">{t(`services.${service}.desc`)}</p>
                             <div className="flex flex-wrap gap-2 pt-2">
                                 {t.raw(`services.${service}.features`).map((f: string) => (
@@ -106,8 +106,8 @@ export default async function SmallBusinessDemo({
             </section>
 
             {/* 5. FOOTER */}
-            <footer className="py-32 px-6 border-t border-white/5 bg-[#0a0c0a]">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-16 text-center md:text-left">
+            <footer className="py-20 md:py-32 px-4 md:px-6 border-t border-white/5 bg-[#0a0c0a]">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 md:gap-16 text-center md:text-left">
                     <div className="space-y-8">
                         <div className="space-y-2">
                         
