@@ -62,8 +62,8 @@ export default function Footer() {
                         </p>
                     </div>
                     <div className="flex gap-6 text-xs font-medium text-slate-500 dark:text-zinc-500">
-                        <Link href={`/${locale}/privacy`} className="hover:text-blue-600 transition-colors underline-offset-4">{t("privacy")}</Link>
-                        <Link href={`/${locale}/tos`} className="hover:text-blue-600 transition-colors underline-offset-4">{t("terms")}</Link>
+                        <Link href={`/privacy`} className="hover:text-blue-600 transition-colors underline-offset-4">{t("privacy")}</Link>
+                        <Link href={`/tos`} className="hover:text-blue-600 transition-colors underline-offset-4">{t("terms")}</Link>
                     </div>
                 </div>
             </div>

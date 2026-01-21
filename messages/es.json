@@ -447,8 +447,9 @@
         "notice": "Todas las comunicaciones comerciales son manejadas directamente por Agustín Marmor."
     },
     "privacy": {
+        "back": "Volver al Inicio",
         "title": "Política de Privacidad",
-        "lastUpdated": "Última Actualización: 20 de Diciembre de 2025",
+        "lastUpdated": "Última Actualización: 21 de Enero de 2026",
         "section1": {
             "title": "1. Información Recopilada por Agustín Marmor",
             "content": "Esta política describe cómo <strong>Agustín Marmor</strong> (operando bajo la marca de portafolio \"MarmorSlab\") recopila y maneja tus datos. Recopilamos información que nos proporcionas directamente a través de nuestros formularios de contacto, incluyendo tu nombre, dirección de correo electrónico y detalles del proyecto. Además, recopilamos automáticamente información técnica a través de Vercel Speed Insights para monitorear y mejorar el rendimiento de nuestra infraestructura web."
@@ -472,11 +473,36 @@
         "section6": {
             "title": "6. Cambios a Esta Política",
             "content": "El Desarrollador se reserva el derecho de actualizar esta Política de Privacidad en cualquier momento. Cualquier cambio se publicará en esta página con una fecha de revisión actualizada. Tu uso continuo de nuestros servicios después de tales cambios constituye tu reconocimiento de la política modificada."
+        },
+        "section7": {
+            "title": "7. Derechos del Usuario y Acceso a Datos",
+            "content": "Tienes derecho a solicitar acceso, corrección o eliminación de tu información personal. Para ejercer estos derechos, por favor contáctanos en marmoragustin@gmail.com. Responderemos a tu solicitud dentro de 30 días. También puedes solicitar una copia de tus datos en formato portable."
+        },
+        "section8": {
+            "title": "8. Cookies y Análisis",
+            "content": "Este sitio web utiliza Vercel Analytics para recopilar datos de uso anónimos incluyendo vistas de página, ubicación geográfica (a nivel de país) y tipo de dispositivo. No se recopila información de identificación personal a través de análisis. No utilizamos cookies publicitarias ni píxeles de seguimiento de terceros. Puedes desactivar los análisis usando la configuración de privacidad del navegador o bloqueadores de anuncios."
+        },
+        "section9": {
+            "title": "9. Retención de Datos",
+            "content": "Las presentaciones de formularios de contacto y datos de consultas de proyectos se retienen hasta por 2 años para fines de mantenimiento de registros comerciales. Después de este período, los datos pueden archivarse o eliminarse permanentemente. Puedes solicitar la eliminación anticipada de tus datos en cualquier momento contactándonos directamente."
+        },
+        "section10": {
+            "title": "10. Transferencias Internacionales de Datos",
+            "content": "Tu información puede almacenarse en servidores ubicados en los Estados Unidos u otros países donde operan nuestros proveedores de servicios. Al usar este sitio web, consientes la transferencia de tu información a países fuera de tu país de residencia, que pueden tener leyes de protección de datos diferentes."
+        },
+        "section11": {
+            "title": "11. Privacidad de Menores",
+            "content": "Este sitio web no está destinado a personas menores de 13 años. No recopilamos intencionalmente información personal de niños. Si crees que hemos recopilado inadvertidamente datos de un niño, por favor contáctanos inmediatamente en marmoragustin@gmail.com y eliminaremos dicha información de inmediato."
+        },
+        "section12": {
+            "title": "12. Información de Contacto",
+            "content": "Para preguntas o inquietudes sobre esta Política de Privacidad o tus datos personales, por favor contacta a Agustín Marmor en marmoragustin@gmail.com o a través del formulario de contacto en este sitio web."
         }
     },
     "tos": {
+        "back": "Volver al Inicio",
         "title": "Términos de Servicio",
-        "lastUpdated": "Última Actualización: 20 de Diciembre de 2025",
+        "lastUpdated": "Última Actualización: 21 de Enero de 2026",
         "section1": {
             "title": "1. Alcance de los Servicios de Ingeniería",
             "content": "MarmorSlab es una marca de portafolio profesional propiedad y operada por <strong>Agustín Marmor</strong> (\"el Desarrollador\"). Estos términos rigen el diseño web personalizado, la ingeniería front-end y los servicios de infraestructura de implementación proporcionados por el Desarrollador. Cada proyecto se rige por una Declaración de Trabajo (SOW) separada."
@@ -502,7 +528,35 @@
             "content": "En ningún caso el Desarrollador (Agustín Marmor) será responsable de daños indirectos, incidentales o consecuentes (incluyendo pérdida de ganancias comerciales) que surjan del uso de los sitios web diseñados bajo la marca MarmorSlab."
         },
         "section7": {
-            "title": "7. Modificaciones a los Términos",
+            "title": "7. Política de Pagos y Reembolsos",
+            "content": "Se requiere un depósito no reembolsable del 50% para iniciar cualquier proyecto. El saldo restante vence al momento de la entrega final. Todos los pagos se procesan de forma segura a través de Stripe, nuestro procesador de pagos de terceros. Al realizar un pago, usted acepta los Términos de Servicio y la Política de Privacidad de Stripe. Una vez que el trabajo de desarrollo ha comenzado, el depósito inicial no es reembolsable. Si el cliente cancela el proyecto después de la aprobación del diseño o durante el desarrollo activo, se le facturará a nuestra tarifa estándar por hora por todo el trabajo completado más allá del depósito. No se proporcionan reembolsos por trabajos completados que cumplan con las especificaciones del SOW acordado. Los reembolsos, si aplican, se procesarán a través de Stripe dentro de 5-10 días hábiles."
+        },
+        "section8": {
+            "title": "8. Confidencialidad",
+            "content": "MarmorSlab se compromete a mantener la confidencialidad de cualquier información comercial propietaria, secretos comerciales o datos sensibles compartidos durante el curso del proyecto. La información del cliente no será divulgada a terceros excepto según lo requiera la ley o con el consentimiento explícito del cliente. Ambas partes acuerdan manejar todos los materiales confidenciales con el cuidado apropiado."
+        },
+        "section9": {
+            "title": "9. Garantías y Exenciones de Responsabilidad",
+            "content": "Todos los sitios web se entregan 'tal cual' al momento de la aceptación final. MarmorSlab no ofrece garantías, expresas o implícitas, incluyendo pero no limitándose a garantías de comerciabilidad o idoneidad para un propósito particular. Si bien diseñamos sitios según los estándares de la industria, no podemos garantizar operación ininterrumpida o seguridad absoluta debido a la naturaleza inherente de la infraestructura de internet."
+        },
+        "section10": {
+            "title": "10. Fuerza Mayor",
+            "content": "MarmorSlab no será responsable de ningún fallo o retraso en el desempeño debido a circunstancias fuera de control razonable, incluyendo pero no limitándose a actos de Dios, desastres naturales, pandemias, acciones gubernamentales, interrupciones del servicio de internet o interrupciones de plataformas de terceros. En tales eventos, los plazos del proyecto pueden extenderse en consecuencia."
+        },
+        "section11": {
+            "title": "11. Divisibilidad",
+            "content": "Si alguna disposición de estos Términos de Servicio se considera inaplicable o inválida según la ley aplicable, dicha disposición se modificará para reflejar la intención de las partes o se eliminará en la medida mínima necesaria, y las disposiciones restantes continuarán en pleno vigor y efecto."
+        },
+        "section12": {
+            "title": "12. Ley Aplicable y Jurisdicción",
+            "content": "Estos Términos de Servicio se regirán e interpretarán de acuerdo con las leyes del Estado de Florida, Estados Unidos, sin tener en cuenta sus principios de conflicto de leyes. Cualquier disputa que surja bajo estos términos estará sujeta a la jurisdicción exclusiva de los tribunales ubicados en el Condado de Osceola, Florida."
+        },
+        "section13": {
+            "title": "13. Información de Contacto",
+            "content": "Para preguntas sobre estos Términos de Servicio, por favor contacta a Agustín Marmor en marmoragustin@gmail.com o a través del formulario de contacto en este sitio web."
+        },
+        "section14": {
+            "title": "14. Modificaciones a los Términos",
             "content": "MarmorSlab se reserva el derecho de modificar estos Términos de Servicio en cualquier momento. Los cambios entrarán en vigencia inmediatamente después de ser publicados en esta página. Es responsabilidad del cliente revisar estos términos periódicamente para mantenerse informado sobre las actualizaciones."
         }
     }

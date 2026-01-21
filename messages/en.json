@@ -447,8 +447,9 @@
         "notice": "All business communications are handled directly by Agustin Marmor."
     },
     "privacy": {
+        "back": "Back to Home",
         "title": "Privacy Policy",
-        "lastUpdated": "Last Updated: December 20, 2025",
+        "lastUpdated": "Last Updated: January 21, 2026",
         "section1": {
             "title": "1. Information Collected by Agustin Marmor",
             "content": "This policy describes how <strong>Agustin Marmor</strong> (operating under the portfolio brand \"MarmorSlab\") collects and handles your data. We collect information that you provide directly to us through our contact forms, including your name, email address, and project details. Additionally, we automatically collect technical information through Vercel Speed Insights to monitor and improve the performance of our web infrastructure."
@@ -472,11 +473,36 @@
         "section6": {
             "title": "6. Changes to This Policy",
             "content": "The Developer reserves the right to update this Privacy Policy at any time. Any changes will be posted on this page with an updated revision date. Your continued use of our services after such changes constitutes your acknowledgment of the modified policy."
+        },
+        "section7": {
+            "title": "7. User Rights & Data Access",
+            "content": "You have the right to request access to, correction of, or deletion of your personal information. To exercise these rights, please contact us at marmoragustin@gmail.com. We will respond to your request within 30 days. You may also request a copy of your data in a portable format."
+        },
+        "section8": {
+            "title": "8. Cookies & Analytics",
+            "content": "This website uses Vercel Analytics to collect anonymous usage data including page views, geographic location (country-level), and device type. No personally identifiable information is collected through analytics. We do not use advertising cookies or third-party tracking pixels. You may disable analytics by using browser privacy settings or ad blockers."
+        },
+        "section9": {
+            "title": "9. Data Retention",
+            "content": "Contact form submissions and project inquiry data are retained for up to 2 years for business record-keeping purposes. After this period, data may be archived or permanently deleted. You may request early deletion of your data at any time by contacting us directly."
+        },
+        "section10": {
+            "title": "10. International Data Transfers",
+            "content": "Your information may be stored on servers located in the United States or other countries where our service providers operate. By using this website, you consent to the transfer of your information to countries outside your country of residence, which may have different data protection laws."
+        },
+        "section11": {
+            "title": "11. Children's Privacy",
+            "content": "This website is not intended for individuals under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected data from a child, please contact us immediately at marmoragustin@gmail.com and we will promptly delete such information."
+        },
+        "section12": {
+            "title": "12. Contact Information",
+            "content": "For questions or concerns about this Privacy Policy or your personal data, please contact Agustin Marmor at marmoragustin@gmail.com or through the contact form on this website."
         }
     },
     "tos": {
+        "back": "Back to Home",
         "title": "Terms of Service",
-        "lastUpdated": "Last Updated: December 20, 2025",
+        "lastUpdated": "Last Updated: January 21, 2026",
         "section1": {
             "title": "1. Scope of Engineering Services",
             "content": "MarmorSlab is a professional portfolio brand owned and operated by <strong>Agustin Marmor</strong> (\"the Developer\"). These terms govern the custom web design, front-end engineering, and deployment infrastructure services provided by the Developer. Each project is governed by a separate Statement of Work (SOW)."
@@ -502,7 +528,35 @@
             "content": "In no event shall the Developer (Agustin Marmor) be liable for any indirect, incidental, or consequential damages (including loss of business profits) arising from the use of the websites engineered under the MarmorSlab brand."
         },
         "section7": {
-            "title": "7. Modifications to Terms",
+            "title": "7. Payment & Refund Policy",
+            "content": "A non-refundable deposit of 50% is required to initiate any project. The remaining balance is due upon final delivery. All payments are securely processed through Stripe, our third-party payment processor. By making a payment, you agree to Stripe's Terms of Service and Privacy Policy. Once development work has commenced, the initial deposit is non-refundable. If the client cancels the project after design approval or during active development, they will be billed at our standard hourly rate for all work completed beyond the deposit. Refunds are not provided for completed work that meets the agreed-upon SOW specifications. Refunds, if applicable, will be processed through Stripe within 5-10 business days."
+        },
+        "section8": {
+            "title": "8. Confidentiality",
+            "content": "MarmorSlab agrees to maintain the confidentiality of any proprietary business information, trade secrets, or sensitive data shared during the course of the project. Client information will not be disclosed to third parties except as required by law or with explicit client consent. Both parties agree to handle all confidential materials with appropriate care."
+        },
+        "section9": {
+            "title": "9. Warranties & Disclaimers",
+            "content": "All websites are delivered 'as-is' upon final acceptance. MarmorSlab makes no warranties, express or implied, including but not limited to warranties of merchantability or fitness for a particular purpose. While we engineer sites to industry standards, we cannot guarantee uninterrupted operation or absolute security due to the inherent nature of internet infrastructure."
+        },
+        "section10": {
+            "title": "10. Force Majeure",
+            "content": "MarmorSlab shall not be liable for any failure or delay in performance due to circumstances beyond reasonable control, including but not limited to acts of God, natural disasters, pandemics, government actions, internet service disruptions, or third-party platform outages. In such events, project timelines may be extended accordingly."
+        },
+        "section11": {
+            "title": "11. Severability",
+            "content": "If any provision of these Terms of Service is found to be unenforceable or invalid under applicable law, such provision shall be modified to reflect the parties' intention or eliminated to the minimum extent necessary, and the remaining provisions shall continue in full force and effect."
+        },
+        "section12": {
+            "title": "12. Governing Law & Jurisdiction",
+            "content": "These Terms of Service shall be governed by and construed in accordance with the laws of the State of Florida, United States, without regard to its conflict of law principles. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts located in Osceola County, Florida."
+        },
+        "section13": {
+            "title": "13. Contact Information",
+            "content": "For questions regarding these Terms of Service, please contact Agustin Marmor at marmoragustin@gmail.com or through the contact form on this website."
+        },
+        "section14": {
+            "title": "14. Modifications to Terms",
             "content": "MarmorSlab reserves the right to modify these Terms of Service at any time. Changes will become effective immediately upon being posted to this page. It is the client's responsibility to review these terms periodically to stay informed of updates."
         }
     }

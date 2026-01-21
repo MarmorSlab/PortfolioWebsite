@@ -1,13 +1,29 @@
 
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import { ChevronLeft } from 'lucide-react';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export const metadata = { title: 'Terms of Service | Agustin Marmor' }
 
-export default function TOS() {
-    const t = useTranslations('tos');
+export default async function TOS({
+    params
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'tos' });
 
     return (
         <main className="max-w-4xl mx-auto py-24 px-6 text-zinc-300">
+            <div className="flex items-center justify-between mb-8">
+                <a
+                    href={`/${locale}`}
+                    className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-blue-500 active:text-blue-500 transition-colors cursor-pointer"
+                >
+                    <ChevronLeft size={16} /> {t('back')}
+                </a>
+                <LanguageSwitcher />
+            </div>
             <h1 className="text-4xl font-bold text-white mb-8">{t('title')}</h1>
             <p className="mb-8 text-zinc-500 italic">{t('lastUpdated')}</p>
 
@@ -47,6 +63,41 @@ export default function TOS() {
                 <div>
                     <h2 className="text-2xl font-semibold text-blue-500 mb-3">{t('section7.title')}</h2>
                     <p>{t('section7.content')}</p>
+                </div>
+
+                <div>
+                    <h2 className="text-2xl font-semibold text-blue-500 mb-3">{t('section8.title')}</h2>
+                    <p>{t('section8.content')}</p>
+                </div>
+
+                <div>
+                    <h2 className="text-2xl font-semibold text-blue-500 mb-3">{t('section9.title')}</h2>
+                    <p>{t('section9.content')}</p>
+                </div>
+
+                <div>
+                    <h2 className="text-2xl font-semibold text-blue-500 mb-3">{t('section10.title')}</h2>
+                    <p>{t('section10.content')}</p>
+                </div>
+
+                <div>
+                    <h2 className="text-2xl font-semibold text-blue-500 mb-3">{t('section11.title')}</h2>
+                    <p>{t('section11.content')}</p>
+                </div>
+
+                <div>
+                    <h2 className="text-2xl font-semibold text-blue-500 mb-3">{t('section12.title')}</h2>
+                    <p>{t('section12.content')}</p>
+                </div>
+
+                <div>
+                    <h2 className="text-2xl font-semibold text-blue-500 mb-3">{t('section13.title')}</h2>
+                    <p>{t('section13.content')}</p>
+                </div>
+
+                <div>
+                    <h2 className="text-2xl font-semibold text-blue-500 mb-3">{t('section14.title')}</h2>
+                    <p>{t('section14.content')}</p>
                 </div>
             </section>
             <footer className="mt-12 text-xs text-zinc-600">

@@ -38,7 +38,11 @@ export default function ThankYou() {
                     {t('title')}
                 </h1>
 
-                <p className="text-xl text-slate-600 dark:text-zinc-400 mb-12 leading-relaxed" dangerouslySetInnerHTML={{ __html: t('subtitle') }} />
+                <p className="text-xl text-slate-600 dark:text-zinc-400 mb-12 leading-relaxed">
+                    {t.rich('subtitle', {
+                        strong: (chunks) => <strong className="font-bold text-slate-900 dark:text-white">{chunks}</strong>
+                    })}
+                </p>
 
                 <div className="grid sm:grid-cols-2 gap-6 mb-12 text-left">
                     <div className="p-6 bg-slate-50 dark:bg-zinc-900/50 rounded-2xl border border-slate-100 dark:border-zinc-800">
